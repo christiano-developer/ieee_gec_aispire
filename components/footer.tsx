@@ -12,7 +12,9 @@ interface NavbarProps {
 const Footer: React.FC<NavbarProps> = ({ className, links = [] }) => {
   const defaultLinks = [{ href: "ieee.org", label: "ieee" }];
   return (
-    <footer className={`${className} bg-black text-primary flex py-8`}>
+    <footer
+      className={`${className}  bg-black text-primary flex py-8 font-pixel`}
+    >
       <Image
         className="ml-5 "
         src="/HIZE_nobg.png"

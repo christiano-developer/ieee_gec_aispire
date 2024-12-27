@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/button": "^2.2.8",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-countdown-circle-timer": "^3.2.1",

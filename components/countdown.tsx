@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { JSX } from "react/jsx-dev-runtime";
@@ -6,6 +7,10 @@ import { JSX } from "react/jsx-dev-runtime";
 const minuteSeconds = 60;
 const hourSeconds = 3600;
 const daySeconds = 86400;
+
+interface countProps {
+  className?: string;
+}
 
 const timerProps = {
   isPlaying: true,
@@ -34,7 +39,7 @@ const renderTime = (dimension: string, time: number): JSX.Element => {
 };
 
 // Main Countdown component
-const Countdown: React.FC = () => {
+const Countdown: React.FC<countProps> = ({ className }) => {
   const startTime = Math.floor(Date.now() / 1000); // Current UNIX timestamp in seconds
   const targetDate = new Date("2024-12-31T19:59:59Z").getTime() / 1000; // Target date in seconds
   const remainingTime = Math.max(targetDate - startTime, 0); // Remaining time in seconds
@@ -53,8 +58,11 @@ const Countdown: React.FC = () => {
   const daysDuration = days * daySeconds;
 
   return (
-    <div className="min-h-screen flex space-x-3 items-center justify-center  text-gray-800">
+    <div
+      className={`min-h-fit flex space-x-3 items-center justify-center  text-gray-800 ${className}`}
+    >
       {/* Days Timer */}
+
       <CountdownCircleTimer
         {...timerProps}
         /*  #5C8374
@@ -71,6 +79,7 @@ const Countdown: React.FC = () => {
           renderTime("Days", getTimeDays(daysDuration - elapsedTime))
         }
       </CountdownCircleTimer>
+      {/*<h1 className="text-center mt-1 text-white">DAYS</h1>*/}
 
       {/* Hours Timer */}
       <CountdownCircleTimer

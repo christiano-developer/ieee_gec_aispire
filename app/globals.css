@@ -1,3 +1,7 @@
+@import url("https://fonts.cdnfonts.com/css/ultimate-gear");
+@import url("https://fonts.cdnfonts.com/css/hacked");
+@import url("https://fonts.cdnfonts.com/css/pixelated-elegance");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,13 +22,4 @@ body {
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
-}
-
-@font-face {
-    font-family: "uge";
-    src:
-        url("/fonts/UltimateGear-EaV0g.otf") format("otf"),
-        url("/fonts/UltimateGearSlant-ax9eJ.otf") format("otf");
-    font-weight: 400;
-    font-style: normal;
 }

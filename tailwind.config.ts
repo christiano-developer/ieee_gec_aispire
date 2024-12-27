@@ -11,11 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#ff671f",
-        secondary: "#1a1719",
+        primary: "#092635",
+        secondary: "#9EC8B9",
       },
       fontFamily: {
-        ugs: ["var(--font-ugs)"],
+        ugs: ["Ultimate Gear"],
+        hacked: ["HACKED"],
       },
     },
   },
