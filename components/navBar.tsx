@@ -8,12 +8,12 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ className }) => {
   const logosLeft = [
-    { src: "/HIZE_nobg.png", width: 90, height: 30 },
-    { src: "/IEEE_black.png", width: 90, height: 30 },
+    { src: "/HIZE_nobg.png", width: 100, height: 30 },
+    { src: "/IEEE_black.png", width: 100, height: 30 },
   ];
   const logosRight = [
     { src: "/GEC_logo_nobg.png", width: 50, height: 50 },
-    { src: "/GEC_logo_nobg.png", width: 50, height: 50 },
+    { src: "/AiSPIRE_logo_white.png", width: 150, height: 60 },
   ];
 
   return (

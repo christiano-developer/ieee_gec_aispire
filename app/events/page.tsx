@@ -17,7 +17,7 @@ const eventsData = [
     linkLabel: "Event Details",
     buttonlink: "",
     eventdet: "",
-    img: "",
+    img: "LFR",
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
@@ -31,9 +31,9 @@ const eventsData = [
     linkLabel: "Event Details",
     buttonlink: "",
     eventdet: "",
-    img: "",
+    img: "RoboRace",
     imgAlt: "Turbo Track Robo Race Event",
-    imgW: 0,
+    imgW: 190,
     imgH: 0,
   },
   {
@@ -45,7 +45,7 @@ const eventsData = [
     linkLabel: "Event Details",
     buttonlink: "",
     eventdet: "",
-    img: "",
+    img: "MazeSolver",
     imgAlt: "Robot Maze Solver Event",
     imgW: 0,
     imgH: 0,
@@ -80,6 +80,7 @@ const eventsData = [
   },
   {
     title: "Placement Bootcamp",
+    className: "text-[13px]",
     subTitle: "Hardware Hustle",
     description:
       "Gear up for a 24-hour hackathon! Design and build an Autonomous or Controlled Image Processing Search Vehicle. Showcase speed, precision, and creativity as your bot navigates obstacles and identifies targets. Bonus points for autonomy and sleek design. Are you ready to innovate?",
@@ -95,6 +96,7 @@ const eventsData = [
   {
     title: "Capture the Flag",
     subTitle: "Cybersecurity Meets Robotics",
+    className: "text-[15px]",
     description:
       "Team up in pairs for an action-packed challenge! Solve beginner to intermediate tasks blending cybersecurity and robotics, earn points, and hunt for flags. Are you ready to rise to the top?",
     buttonLabel: "Register Now!",
@@ -145,7 +147,9 @@ export default function Events() {
         Events
       </span>
 
-      <EventsList events={eventsData} />
+      <EventsList events={eventsData.slice(0, 3)} isTitle={true} />
+      <EventsList events={eventsData.slice(3, 6)} />
+      <EventsList events={eventsData.slice(6)} />
     </div>
   );
 }

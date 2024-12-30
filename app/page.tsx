@@ -3,14 +3,12 @@ import AboutCard from "@/components/aboutCard";
 import ButtonG from "@/components/button";
 import Countdown from "@/components/countdown";
 import SpeakerList from "@/components/speakerList";
+import Image from "next/image";
 
 import localFont from "next/font/local";
 
 const ugs = localFont({
   src: "../public/fonts/UltimateGearSlant.woff2",
-});
-const ug = localFont({
-  src: "../public/fonts/UltimateGear.woff2",
 });
 
 const speakers = [
@@ -23,10 +21,10 @@ const speakers = [
     linkLabel: "Event Details",
     buttonlink: "",
     eventdet: "",
-    img: "",
+    img: "/events/WomenSummit.png",
     imgAlt: "Line Follower Robot Event",
-    imgW: 0,
-    imgH: 0,
+    imgW: 100,
+    imgH: 100,
   },
 ];
 
@@ -40,12 +38,23 @@ export default function Home() {
     <div className="bg-[#092635] min-h-screen text-white mt-[74px] px-16">
       <div className="container p-10 pt-20 content-center">
         <div className="flex  space-x-5">
-          <p
+          <div
             className={`text-center text-6xl tracking-wide text-white ${ugs.className}`}
           >
             IEEE CS SYP  High Impact Zonal Event -
-            <p className={`text-7xl ${ug.className}`}>Aispire</p>
-          </p>
+            <Image
+              src={"/AiSPIRE_logo_white.png"}
+              alt="about"
+              width={450}
+              height={50}
+              className="pl-28 mt-4"
+            />
+            <p
+              className={`text-center text-4xl mt-4 tracking-wide text-white ${ugs.className}`}
+            >
+              7-8 Feb, 2025
+            </p>
+          </div>
           <Countdown className="relative top-32 scale-75" />
         </div>
         <div className="flex space-x-4 text-xl">
