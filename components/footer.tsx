@@ -13,19 +13,23 @@ const Footer: React.FC<NavbarProps> = ({ className, links = [] }) => {
   const defaultLinks = [{ href: "ieee.org", label: "ieee" }];
   return (
     <footer
-      className={`${className}  bg-black text-primary flex py-8 font-pixel`}
+      className={`${className}  h-36 justify-between  bg-black text-primary flex py-8  px-16`}
     >
       <Image
-        className="ml-5 "
         src="/HIZE_nobg.png"
-        width={300}
-        height={40}
+        width={250}
+        height={100}
         alt="logo_ieee_hize"
       />
-      <div className="container mx-auto text-center">
-        <p>
-          &copy; {new Date().getFullYear()} Your Company. All rights reserved.
-        </p>
+      <Image
+        src="/AiSPIRE_logo_white.png"
+        width={300}
+        height={10}
+        alt="logo_ieee_hize"
+        className="scale-75"
+      />
+      {/*<div className="container mx-auto text-center">
+        <p>&copy; {new Date().getFullYear()} IEEE. All rights reserved.</p>
         <div className="mt-4">
           {(links.length > 0 ? links : defaultLinks).map((link, index) => (
             <Link
@@ -37,7 +41,7 @@ const Footer: React.FC<NavbarProps> = ({ className, links = [] }) => {
             </Link>
           ))}
         </div>
-      </div>
+      </div>*/}
     </footer>
   );
 };

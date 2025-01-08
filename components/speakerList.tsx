@@ -1,53 +1,84 @@
-// components/EventCard.tsx
-import { Nunito } from "next/font/google";
+// import { Nunito } from "next/font/google";
 
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 
 import Image from "next/image";
 
-const pixel = localFont({
+/*const pixel = localFont({
   src: "../public/fonts/subset-PixelatedElegance.woff2",
 });
 
 const nunito = Nunito({
   weight: "600",
   subsets: ["latin"],
-});
+  });*/
 interface SpeakerCardProps {
-  title: string;
+  title?: string;
   subTitle?: string;
-  description: string;
+  description?: string;
   img: string;
   imgAlt: string;
-  imgW: number;
-  imgH: number;
 }
 
 const SpeakerCard: React.FC<SpeakerCardProps> = ({
-  title,
-  subTitle,
   description,
+  title,
   img,
   imgAlt,
-  imgW,
-  imgH,
 }) => {
+  const logosLeft = [{ src: "/HIZE_nobg.png" }];
+  const logosRight = [
+    { src: "/HIZE_nobg.png" },
+    { src: "/GEC_logo_nobg.png" },
+    { src: "/IEEEMB_nobg.png" },
+  ];
   return (
     <div
-      className={`flex flex-col justify-between rounded-lg border-[#9EC8B9] border-[0.09rem] w-fit bg-gradient-to-b from-[#092635] to-[#1B4242] m-5 p-10 bg-white shadow-inner shadow-gray-950/20`}
+      className={`flex flex-col justify-between shadow-md shadow-black rounded-lg border-[#9EC8B9] border-[0.09rem] bg-gradient-to-b from-[#092635] to-[#1B4242] m-5 w-72 h-96`}
     >
-      <h1 className={`text-xl font-bold text-center mb-4 ${pixel.className}`}>
-        {title}
-      </h1>
-      <Image
-        src={img ? img : "/"}
-        alt={imgAlt ? imgAlt : " "}
-        width={imgW ? imgW : 0}
-        height={imgH ? imgH : 0}
-      />
-      <h3 className={`${pixel.className} text-md text-center`}>{subTitle}</h3>
-      <div className={`${nunito.className} flex-grow`}>
-        <p className="text-gray-700 mb-6 text-center">{description}</p>
+      {/* Logos Section */}
+      <div className="grid grid-cols-2 bg-black rounded-tl-lg rounded-tr-lg border-b-[0.09rem] border-secondary px-3 py-1 mb-5">
+        <div className="flex items-center space-x-2">
+          {logosLeft.map((logosLeft, index) => (
+            <Image
+              alt="logos"
+              key={index}
+              width={50}
+              height={30}
+              src={logosLeft.src}
+            />
+          ))}
+        </div>
+        <div className="flex flex-row-reverse items-center space-x-2">
+          {logosRight.map((logosRight, index) => (
+            <Image
+              alt="logos"
+              key={index}
+              width={30}
+              height={30}
+              src={logosRight.src}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Speaker Image Section */}
+      <div className="self-center flex flex-col items-center space-y-3">
+        <div className="rounded-full border w-24 h-24 overflow-hidden">
+          <Image
+            src={img || "/"} // Speaker image
+            alt={imgAlt || " "}
+            width={96} // Constant width
+            height={96} // Constant height
+            className="w-full h-full object-cover" // Ensures the image covers the container
+          />
+        </div>
+        <h3 className="text-lg font-medium text-white">{title}</h3>
+      </div>
+
+      {/* Description Section */}
+      <div className="flex-1 text-center px-3 py-2 text-sm text-gray-300">
+        {description}
       </div>
     </div>
   );
@@ -57,23 +88,19 @@ interface Speaker {
   title: string;
   subTitle?: string;
   description: string;
-  buttonLabel: string;
-  linkLabel: string;
-  buttonlink: string;
-  eventdet: string;
+
   img: string;
   imgAlt: string;
-  imgW: number;
-  imgH: number;
 }
 
-interface EventsListProps {
+interface SpeakerListProps {
   speakers: Speaker[];
+  className?: string;
 }
 
-const SpeakerList: React.FC<EventsListProps> = ({ speakers }) => {
+const SpeakerList: React.FC<SpeakerListProps> = ({ speakers, className }) => {
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className={`grid grid-cols-3 gap-3  ${className}`}>
       {speakers.map((speaker, index) => (
         <SpeakerCard
           key={index}
@@ -81,8 +108,6 @@ const SpeakerList: React.FC<EventsListProps> = ({ speakers }) => {
           subTitle={speaker.subTitle}
           description={speaker.description}
           img={speaker.img}
-          imgH={speaker.imgH}
-          imgW={speaker.imgW}
           imgAlt={speaker.imgAlt}
         />
       ))}

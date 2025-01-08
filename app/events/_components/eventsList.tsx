@@ -4,7 +4,11 @@ import EventCard from "./eventCard";
 import localFont from "next/font/local";
 
 const hacked = localFont({
-  src: "../../../public/fonts/subset-HACKED.woff2",
+  src: [
+    { path: "../../../public/fonts/subset-HACKED.woff2" },
+    { path: "../../../public/fonts/subset-HACKED.woff" },
+    { path: "../../../public/fonts/subset-HACKED.ttf" },
+  ],
 });
 
 interface Event {

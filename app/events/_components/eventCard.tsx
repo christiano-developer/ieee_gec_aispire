@@ -7,7 +7,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const pixel = localFont({
-  src: "../../../public/fonts/subset-PixelatedElegance.woff2",
+  src: [
+    { path: "../../../public/fonts/subset-PixelatedElegance.woff2" },
+    { path: "../../../public/fonts/subset-PixelatedElegance.woff" },
+    { path: "../../../public/fonts/subset-PixelatedElegance.ttf" },
+  ],
 });
 
 const nunito = Nunito({
@@ -45,7 +49,7 @@ const EventCard: React.FC<EventCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col justify-between  rounded-lg bg-gradient-to-b from-[#092635] to-[#1B4242] my-5 p-8 py-5 bg-white shadow-inner shadow-gray-950/20`}
+      className={`flex flex-col justify-between lg:w-72 sm:scale-50 lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#1B4242] my-5 p-8 py-5 bg-white shadow-inner shadow-gray-950/20`}
     >
       <h1
         className={`text-xl font-bold text-center whitespace-nowrap ${className} ${pixel.className}`}

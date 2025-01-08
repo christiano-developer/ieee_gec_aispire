@@ -41,7 +41,7 @@ const renderTime = (dimension: string, time: number): JSX.Element => {
 // Main Countdown component
 const Countdown: React.FC<countProps> = ({ className }) => {
   const startTime = Math.floor(Date.now() / 1000); // Current UNIX timestamp in seconds
-  const targetDate = new Date("2024-12-31T19:59:59Z").getTime() / 1000; // Target date in seconds
+  const targetDate = new Date("2025-02-06T17:59:59Z").getTime() / 1000; // Target date in seconds
   const remainingTime = Math.max(targetDate - startTime, 0); // Remaining time in seconds
   const date = new Date().getDate();
   const initialdate = new Date("2024-12-31T19:59:59Z").getDate();

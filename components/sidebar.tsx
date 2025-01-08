@@ -1,7 +1,7 @@
 // components/SidePanel.tsx
 import Link from "next/link";
 import React, { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // Icons for menu toggle
+import { FiMenu } from "react-icons/fi"; // Icons for menu toggle
 
 interface sideProps {
   className?: string;
@@ -15,10 +15,11 @@ const SidePanel: React.FC<sideProps> = ({ links = [] }) => {
     setIsOpen(!isOpen);
   };
   const defaultLinks = [
+    { href: "/", label: "Home" },
     { href: "/events", label: "Events" },
-    { href: "#speakers", label: "Speakers" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "/speakers", label: "Speakers" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -29,17 +30,13 @@ const SidePanel: React.FC<sideProps> = ({ links = [] }) => {
         className="text-white text-2xl p-2 focus:outline-none "
         aria-label="Toggle Menu"
       >
-        {isOpen ? (
-          <FiX />
-        ) : (
-          <FiMenu size={50} strokeLinecap="square" strokeWidth={1.5} />
-        )}
+        <FiMenu size={50} strokeLinecap="square" strokeWidth={1.5} />
       </button>
 
       {/* Side Panel */}
       <div
-        className={`fixed inset-y-0 right-0 z-50 w-48 flex flex-col pt-10 bg-gray-800 text-white transform ${
-          isOpen ? "-translate-x-100" : "translate-x-full"
+        className={`fixed inset-y-0 right-0 z-50 w-48 h-auto flex flex-col pt-10 bg-gray-800 text-white transform ${
+          isOpen ? "-translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out items-center`}
       >
         <div className="">
@@ -58,7 +55,7 @@ const SidePanel: React.FC<sideProps> = ({ links = [] }) => {
       {/* Overlay (closes sidebar when clicking outside) */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed  inset-0 bg-black bg-opacity-50 z-40"
           onClick={toggleSidePanel}
         ></div>
       )}

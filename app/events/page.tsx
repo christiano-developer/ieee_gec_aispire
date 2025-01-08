@@ -4,7 +4,11 @@ import EventsList from "./_components/eventsList";
 import localFont from "next/font/local";
 
 const ugs = localFont({
-  src: "../../public/fonts/UltimateGearSlant.woff2",
+  src: [
+    { path: "../../public/fonts/UltimateGearSlant.woff2" },
+    { path: "../../public/fonts/UltimateGearSlant.woff" },
+    { path: "../../public/fonts/UltimateGearSlant.ttf" },
+  ],
 });
 
 const eventsData = [
@@ -80,7 +84,7 @@ const eventsData = [
   },
   {
     title: "Placement Bootcamp",
-    className: "text-[13px]",
+    className: "text-[12px]",
     subTitle: "Hardware Hustle",
     description:
       "Gear up for a 24-hour hackathon! Design and build an Autonomous or Controlled Image Processing Search Vehicle. Showcase speed, precision, and creativity as your bot navigates obstacles and identifies targets. Bonus points for autonomy and sleek design. Are you ready to innovate?",
@@ -95,8 +99,8 @@ const eventsData = [
   },
   {
     title: "Capture the Flag",
-    subTitle: "Cybersecurity Meets Robotics",
-    className: "text-[15px]",
+    subTitle: "Cybersecurity & Robotics",
+    className: "text-[17px]",
     description:
       "Team up in pairs for an action-packed challenge! Solve beginner to intermediate tasks blending cybersecurity and robotics, earn points, and hunt for flags. Are you ready to rise to the top?",
     buttonLabel: "Register Now!",

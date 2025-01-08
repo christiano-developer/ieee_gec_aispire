@@ -8,25 +8,29 @@ const hacked = localFont({
 
 interface cardProps {
   className?: string;
+  img: string;
 }
-const AboutCard: React.FC<cardProps> = ({ className }) => {
+const AboutCard: React.FC<cardProps> = ({ className, img }) => {
   return (
     <div
-      className={`flex justify-stretch rounded-lg w-fit bg-gradient-to-b from-[#1B4242] to-[#5C8374] m-5 mt-20 p-10 px-20 ${className}`}
+      className={`flex rounded-lg w-fit bg-gradient-to-b from-[#1B4242] to-[#5C8374] space-x-2  p-10 px-20 ${className}`}
     >
       <Image
-        src="/events/WomenSummit.png"
+        src={img}
         alt="about "
-        width={300}
-        height={100}
-        className="rounded-xl"
+        width={500}
+        height={50}
+        className="self-center rounded-xl flex-grow-[2] h-[300px]"
       />
       <div>
-        <h1 className={`${hacked.className} text-center text-6xl`}>
+        <h1
+          className={`${hacked.className}
+          text-center text-6xl`}
+        >
           About hize
         </h1>
 
-        <p className="text-center px-10">
+        <p className="text-center px-8 text-[11pt]">
           The IEEE Computer Society, a premier organization under the Institute
           of Electrical and Electronics Engineers (IEEE), is dedicated to
           advancing the theory, practice, and application of computer and
@@ -35,7 +39,7 @@ const AboutCard: React.FC<cardProps> = ({ className }) => {
           drive innovation. One of its key initiatives, the IEEE High Impact
           Zonal Events (HIZE), has been inspiring India’s brightest tech minds.
         </p>
-        <p className="text-center px-10">
+        <p className="text-center px-8 text-[11pt]">
           HIZE 2025, named AiSPIRE and hosted by the Goa College of Engineering
           (GEC), will be one of India’s largest tech events, focusing on fields
           like AI, robotics, and cybersecurity. The event will include a 24-hour
