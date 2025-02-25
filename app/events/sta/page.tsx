@@ -6,7 +6,7 @@ const eventsData = [
   {
     title: "Pitch It Up",
     subTitle: "Idea Pitching",
-    imgdet: "",
+    imgdet: ["pitch_it_up_1", "pitch_it_up_2"],
     description:
       "Got a game-changing idea? Craft a powerful pitch deck showcasing your Problem, Solution, and Business Model. Work solo or in a team and stand out with creativity and market potential. Ready to impress? Let’s pitch!",
     linkLabel: "Event Details",
@@ -20,7 +20,7 @@ const eventsData = [
   {
     title: "TechXplore",
     subTitle: "Project Exposition",
-    imgdet: "",
+    imgdet: ["techx_1", "techx_2", "techx_3", "techx_4"],
     description:
       "Present your groundbreaking projects, cutting-edge tech, and creative solutions to impress judges and peers. Whether it's Robotics, AI, IoT, or beyond, this is your chance to shine. Ready to inspire the future?",
     linkLabel: "Event Details",

@@ -27,7 +27,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, img, description }) => {
               src={img}
               alt={title}
               fill
-              className="object-cover rounded-sm transition-all duration-500 p-1"
+              className="object-contain rounded-sm transition-all duration-500 p-1"
             />
             <div className="absolute inset-0 flex flex-col  justify-center px-3  group-hover:bg-black transition-all duration-500">
               <h2

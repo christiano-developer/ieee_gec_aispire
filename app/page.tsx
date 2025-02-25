@@ -20,28 +20,36 @@ const ugs = localFont({
 
 const events = [
   {
-    title: "Govind",
+    title: "Robo arena",
     linkLabel: "appapap",
-    buttonLink: "/",
-    img: "/events/cyber_2_wo_bg.png",
+    buttonLink: "/events/ra",
+    img: "/eventO/robo_arena_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: "hehe ahashdj ahsjakskf ashhj ",
   },
   {
-    title: "Govind",
+    title: "cyber arena",
     linkLabel: "appapap",
-    buttonLink: "/",
-    img: "/events/LFR.png",
+    buttonLink: "/events/ca",
+    img: "/eventO/cyber_2_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
-    description: "",
+    description: "hehe ahashdj ahsjakskf ashhj ",
   },
   {
-    title: "Govind",
+    title: "success arena",
     linkLabel: "appapap",
-    buttonLink: "/",
-    img: "/events/LFR.png",
+    buttonLink: "/events/sa",
+    img: "/eventO/success_arena_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
-    description: "",
+    description: "hehe ahashdj ahsjakskf ashhj ",
+  },
+  {
+    title: "Start up arena",
+    linkLabel: "appapap",
+    buttonLink: "/events/sta",
+    img: "/eventO/startup_arena_wo_bg.png",
+    imgAlt: "Line Follower Robot Event",
+    description: "hehe ahashdj ahsjakskf ashhj ",
   },
 ];
 

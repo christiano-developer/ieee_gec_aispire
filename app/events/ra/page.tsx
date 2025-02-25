@@ -9,7 +9,7 @@ const eventsData = [
     description:
       "Control your robot, outmaneuver opponents, and score goals while defending your own! Speed, strategy, and precision will crown the ultimate champion. Are you ready for the challenge?",
     linkLabel: "Event Details",
-    imgdet: "",
+    imgdet: ["LFR_pg1", "LFR_pg2"],
     buttonlink:
       "https://docs.google.com/forms/d/e/1FAIpQLSfEe1L4UA5hWi8n3I90DmNe6n9XPLn3KYpY1dfkN9YVXkBPig/viewform?usp=header",
     eventdet: "",
@@ -21,7 +21,7 @@ const eventsData = [
   {
     title: "Robo Cup",
     subTitle: "Robo Soccer",
-    imgdet: "",
+    imgdet: ["robo_soccer_1", "robo_soccer_2"],
     description:
       "Put your robotics skills to the test! Build and program your Line Follower Robot (LFR) to autonomously follow a track, navigate sharp turns, and race against time. Do you have what it takes to win?",
     linkLabel: "Event Details",
@@ -35,7 +35,7 @@ const eventsData = [
   },
   {
     title: "Robo Derby",
-    imgdet: "",
+    imgdet: ["robo_race_1", "robo_race_2"],
     subTitle: "Robo Race",
     description:
       "Gear up for the ultimate test of speed and agility! Navigate an obstacle-filled track, dodge challenges, and race to victory. Build, control, and conquer—only the fastest bot wins!",
@@ -51,7 +51,7 @@ const eventsData = [
   {
     title: "Hardware Hustle",
     subTitle: "Hardware Hackathon",
-    imgdet: "",
+    imgdet: ["hardware_1", "hardware_2", "hardware_3", "hardware_4"],
     description:
       "Design and build an Autonomous or Controlled Search Vehicle to navigate obstacles and identify targets. Showcase speed, precision, and creativity—bonus points for autonomy and sleek design! Are you ready to innovate?",
     linkLabel: "Event Details",

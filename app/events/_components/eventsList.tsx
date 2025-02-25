@@ -16,8 +16,8 @@ interface Event {
   title: string;
   subTitle?: string;
   description: string;
-  imgdet: string[];
-  linkLabel: string;
+  imgdet?: string[];
+  linkLabel?: string;
   buttonlink: string;
   eventdet: string;
   img: string;
@@ -62,7 +62,6 @@ const EventsList: React.FC<EventsListProps> = ({ events }) => {
         >
           {events.map((event, index) => (
             <div key={index} className="w-full flex-shrink-0 px-4">
-              {/* ✅ Ensuring each card is contained */}
               <EventCard {...event} className="w-full max-w-sm mx-auto" />
             </div>
           ))}

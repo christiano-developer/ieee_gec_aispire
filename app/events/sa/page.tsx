@@ -6,11 +6,11 @@ const eventsData = [
   {
     title: "Placement Bootcamp",
     subTitle: "",
-    imgdet: "",
+    imgdet: [" ", " "],
     description:
       "Connect with top companies from across India, meet recruiters, and showcase your skills. This is your chance to network, impress, and secure your dream job. Are you ready to take the next step?",
-    linkLabel: "Event Details",
     buttonlink: "/",
+    className: "text-sm",
     eventdet: "",
     img: "placement",
     imgAlt: "Line Follower Robot Event",
@@ -20,10 +20,10 @@ const eventsData = [
   {
     title: "Women Summit",
     subTitle: "",
-    imgdet: "",
+    imgdet: [" ", " "],
     description:
       "Join an inspiring summit dedicated to empowering women in STEM! Engage in dynamic discussions, explore new opportunities, and gain insights to boost your leadership potential. Connect with industry leaders, share ideas, and be part of the movement driving change in tech and innovation!",
-    linkLabel: "Event Details",
+
     buttonlink: "/",
     eventdet: "",
     img: "women_summit",
@@ -34,10 +34,10 @@ const eventsData = [
   {
     title: "Expert Talks",
     subTitle: "",
-    imgdet: "",
+
     description:
       "Gain insights from industry leaders, expand your horizons, and ignite your potential. Learn from the best as they share expertise, ideas, and innovations that shape the future. Don’t miss this opportunity to grow and get inspired!",
-    linkLabel: "Event Details",
+
     buttonlink: "/",
     eventdet: "",
     img: "expert_talks",

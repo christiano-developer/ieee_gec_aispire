@@ -9,7 +9,7 @@ const eventsData = [
     subTitle: "",
     description:
       "Lock and load for an adrenaline-fueled battle! Call of Duty delivers intense, fast-paced action, pushing your strategy and reflexes to the limit across thrilling game modes. Are you ready to dominate the battlefield?",
-    linkLabel: "Event Details",
+
     buttonlink: "https://forms.gle/DbbiCar1PKEeVnx66",
     eventdet: "",
     img: "cod",
@@ -23,7 +23,6 @@ const eventsData = [
     imgdet: ["", ""],
     description:
       "Step onto the virtual pitch and showcase your skills!  This highly competitive football simulation challenges you to showcase your skills, master tactics, and outplay opponents in an immersive showdown. Do you have what it takes to lift the trophy?",
-    linkLabel: "Event Details",
     buttonlink: "https://forms.gle/bzasMV3qEtKPBof8A",
     eventdet: "",
     img: "fifa",
@@ -34,7 +33,7 @@ const eventsData = [
   {
     title: "Blind Coding",
     subTitle: "",
-    imgdet: ["", ""],
+    imgdet: ["blind_coding"],
     description:
       "Think you can code without peeking? Test your memory, logic, and speed as you tackle tricky problems under pressure. No syntax highlighting, no previews—just pure skill. Are you up for the challenge?",
     linkLabel: "Event Details",
