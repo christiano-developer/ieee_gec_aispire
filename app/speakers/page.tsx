@@ -45,7 +45,7 @@ export default function Speakers() {
       >
         Speakers
       </span>
-      <SpeakerList speakers={speakers} className="mx-20" />
+      <SpeakerList speakers={speakers} className="mx-20 -my-32" />
     </div>
   );
 }

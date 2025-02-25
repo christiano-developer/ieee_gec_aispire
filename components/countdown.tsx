@@ -14,9 +14,9 @@ interface countProps {
 
 const timerProps = {
   isPlaying: true,
-  size: 120,
-  strokeWidth: 8,
-  trailStrokeWidth: 7,
+  size: 130,
+  strokeWidth: 10,
+  trailStrokeWidth: 9,
 };
 
 // Helper functions to calculate remaining time for each unit
@@ -41,17 +41,15 @@ const renderTime = (dimension: string, time: number): JSX.Element => {
 // Main Countdown component
 const Countdown: React.FC<countProps> = ({ className }) => {
   const startTime = Math.floor(Date.now() / 1000); // Current UNIX timestamp in seconds
-  const targetDate = new Date("2025-02-06T17:59:59Z").getTime() / 1000; // Target date in seconds
+  const targetDate = new Date("2025-04-05T17:59:59Z").getTime() / 1000; // Target date in seconds
   const remainingTime = Math.max(targetDate - startTime, 0); // Remaining time in seconds
-  const date = new Date().getDate();
-  const initialdate = new Date("2024-12-31T19:59:59Z").getDate();
   const [isTimerActive, setIsTimerActive] = useState(true);
 
   useEffect(() => {
-    if (date == initialdate) {
+    if (remainingTime <= 0) {
       setIsTimerActive(false); // Deactivate the timer if expired
     }
-  }, [remainingTime, date, initialdate]);
+  }, [remainingTime]);
 
   // Calculate the duration for the "Days" timer
   const days = Math.ceil(remainingTime / daySeconds);
@@ -59,14 +57,11 @@ const Countdown: React.FC<countProps> = ({ className }) => {
 
   return (
     <div
-      className={`min-h-fit flex space-x-3 items-center justify-center  text-gray-800 ${className}`}
+      className={`min-h-fit flex space-x-3 items-center justify-center text-gray-800 ${className}`}
     >
       {/* Days Timer */}
-
       <CountdownCircleTimer
         {...timerProps}
-        /*  #5C8374
-        #9EC8B9*/
         strokeLinecap="square"
         colors="#9EC8B9"
         trailColor="#5C8374"
@@ -79,8 +74,6 @@ const Countdown: React.FC<countProps> = ({ className }) => {
           renderTime("Days", getTimeDays(daysDuration - elapsedTime))
         }
       </CountdownCircleTimer>
-      {/*<h1 className="text-center mt-1 text-white">DAYS</h1>*/}
-
       {/* Hours Timer */}
       <CountdownCircleTimer
         {...timerProps}
@@ -96,7 +89,6 @@ const Countdown: React.FC<countProps> = ({ className }) => {
           renderTime("Hours", getTimeHours(daySeconds - elapsedTime))
         }
       </CountdownCircleTimer>
-
       {/* Minutes Timer */}
       <CountdownCircleTimer
         {...timerProps}
@@ -124,9 +116,8 @@ const Countdown: React.FC<countProps> = ({ className }) => {
         isPlaying={isTimerActive}
         onComplete={() => ({ shouldRepeat: true })}
       >
-        {
-          ({ elapsedTime }) =>
-            renderTime("Seconds", getTimeSeconds(minuteSeconds - elapsedTime)) // Subtract elapsedTime from total minuteSeconds
+        {({ elapsedTime }) =>
+          renderTime("Seconds", getTimeSeconds(minuteSeconds - elapsedTime))
         }
       </CountdownCircleTimer>
     </div>

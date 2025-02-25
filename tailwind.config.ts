@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         ugs: ["Ultimate Gear"],
         hacked: ["HACKED"],
+        gear: ['"Ultimate Gear Slant"', "sans-serif"],
       },
     },
   },

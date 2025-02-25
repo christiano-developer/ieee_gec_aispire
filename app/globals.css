@@ -1,10 +1,7 @@
-@import url("https://fonts.cdnfonts.com/css/ultimate-gear");
-@import url("https://fonts.cdnfonts.com/css/hacked");
-@import url("https://fonts.cdnfonts.com/css/pixelated-elegance");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.cdnfonts.com/css/ultimate-gear-slant");
 
 :root {
     --background: #ffffff;

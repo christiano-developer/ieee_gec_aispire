@@ -1,5 +1,3 @@
-"use client";
-
 import localFont from "next/font/local";
 
 import ContactCard from "@/components/contact";
@@ -14,11 +12,11 @@ const ugs = localFont({
 
 export default function Events() {
   return (
-    <div className="bg-[#092635] min-h-fit mt-[40px] p-10 ">
+    <div className=" bg-[#092635]  py-20 px-10">
       <span
-        className={` text-center text-8xl drop-shadow-xl py-6  tracking-wider text-white ${ugs.className}`}
+        className={`relative text-center text-7xl drop-shadow-xl py-6  tracking-wider text-white ${ugs.className}`}
       >
-        Speakers
+        Contact
       </span>
       <ContactCard className="mt-5" />
     </div>

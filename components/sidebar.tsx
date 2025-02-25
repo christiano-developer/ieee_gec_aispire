@@ -1,14 +1,13 @@
 // components/SidePanel.tsx
 import Link from "next/link";
-import React, { useState } from "react";
-import { FiMenu } from "react-icons/fi"; // Icons for menu toggle
+import { useState } from "react";
 
 interface sideProps {
   className?: string;
   links?: { href: string; label: string }[];
 }
 
-const SidePanel: React.FC<sideProps> = ({ links = [] }) => {
+const SidePanel: React.FC<sideProps> = ({ links = [], className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidePanel = () => {
@@ -17,20 +16,24 @@ const SidePanel: React.FC<sideProps> = ({ links = [] }) => {
   const defaultLinks = [
     { href: "/", label: "Home" },
     { href: "/events", label: "Events" },
-    { href: "/speakers", label: "Speakers" },
+    { href: "/", label: "Speakers" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
 
   return (
-    <>
+    <div className={`${className}`}>
       {/* Hamburger Icon */}
       <button
         onClick={toggleSidePanel}
-        className="text-white text-2xl p-2 focus:outline-none "
+        className="absolute right-0 text-white text-2xl focus:outline-none bg-primary/40 p-6 pl-96 top-0 backdrop-blur-sm"
         aria-label="Toggle Menu"
       >
-        <FiMenu size={50} strokeLinecap="square" strokeWidth={1.5} />
+        <div className="relative flex flex-col gap-[5px] w-8 rotate-180">
+          <span className="w-7 h-[2px] bg-white block"></span>
+          <span className="w-6 h-[2px] bg-white block"></span>
+          <span className="w-5 h-[2px] bg-white block"></span>
+        </div>
       </button>
 
       {/* Side Panel */}
@@ -59,7 +62,7 @@ const SidePanel: React.FC<sideProps> = ({ links = [] }) => {
           onClick={toggleSidePanel}
         ></div>
       )}
-    </>
+    </div>
   );
 };
 

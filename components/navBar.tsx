@@ -1,48 +1,58 @@
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import SidePanel from "./sidebar";
 
 interface NavbarProps {
   className?: string;
+  navLinks: navLink[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ className }) => {
-  const logosLeft = [
-    { src: "/HIZE_nobg.png", width: 100, height: 30 },
-    { src: "/IEEE_black.png", width: 100, height: 30 },
-  ];
-  const logosRight = [
-    { src: "/GEC_logo_nobg.png", width: 50, height: 50 },
-    { src: "/AiSPIRE_logo_white.png", width: 150, height: 60 },
-  ];
+interface navLink {
+  nLabel: string;
+  nLink: string;
+  classDis?: boolean;
+  classImg?: string;
+  hoverImg?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ className, navLinks }) => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <nav
-      className={`fixed ${className} top-0 z-50 min-w-[100%] bg-[#1b1b1a] text-secondary px-4 py-1 flex justify-between items-center`}
+      className={`flex justify-center shadow-md shadow-black lg:px-5 lg:py-1 px-1 py-1 items-center ${className}`}
     >
-      <div className="flex items-center space-x-10">
-        {logosLeft.map((logosLeft, index) => (
-          <Image
-            alt="logos"
-            key={index}
-            width={logosLeft.width}
-            height={logosLeft.height}
-            src={logosLeft.src}
-          />
-        ))}
-      </div>
-      <div className="flex justify-between items-center space-x-10">
-        {logosRight.map((logosRight, index) => (
-          <Image
-            alt="logos"
-            key={index}
-            width={logosRight.width}
-            height={logosRight.height}
-            src={logosRight.src}
-          />
-        ))}
-        <SidePanel />
-      </div>
+      {navLinks.map((navLink, index) => (
+        <div
+          key={index}
+          className="relative lg:flex flex-col items-center transition-all duration-500 hidden"
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <Link
+            href={navLink.nLink}
+            className={`hover:underline underline-offset-4 hover:scale-110 transition-all duration-500 ${
+              navLink.classDis ? "pointer-events-none" : ""
+            }`}
+          >
+            {navLink.nLabel}
+          </Link>
+          {/* Image on hover */}
+          {hoveredIndex === index && navLink.hoverImg && (
+            <Image
+              src={navLink.hoverImg}
+              alt={`${navLink.nLabel} hover image`}
+              width={80}
+              height={50}
+              className="absolute top-6 "
+            />
+          )}
+        </div>
+      ))}
+      <SidePanel className="lg:hidden flex" />
     </nav>
   );
 };
