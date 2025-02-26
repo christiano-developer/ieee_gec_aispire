@@ -38,7 +38,7 @@ const EventCard: React.FC<EventCardProps> = ({
         style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
       >
         {/* Front Side */}
-        <div className="absolute inset-0 h-full w-full py-2 px-2 rounded-lg bg-gradient-to-b from-[#092635] to-[#1B4242]  shadow-lg transition-all duration-500 [backface-visibility:hidden]">
+        <div className="absolute inset-0 h-full w-full py-2 px-2 rounded-lg bg-gradient-to-b from-[#1B4242] to-[#5C8374]  shadow-lg transition-all duration-500 [backface-visibility:hidden]">
           <div className="relative h-full">
             <Image
               src={img}

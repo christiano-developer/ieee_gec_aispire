@@ -16,7 +16,7 @@ const ContactCard: React.FC<cardProps> = ({ className }) => {
   ];
   return (
     <div
-      className={`text-left mx-4 font-mono   flex self-center justify-center rounded-lg lg:w-full bg-gradient-to-b from-[#1B4242]/50 to-[#5C8374]/90 space-x-2 p-5  lg:p-10 lg:px-20 ${className}`}
+      className={`text-left mx-4 font-mono   flex self-center justify-center rounded-lg lg:w-full bg-gradient-to-b from-[#1B4242]/90 to-[#5C8374]/90 space-x-2 p-5  lg:p-10 lg:px-20 ${className}`}
     >
       <div>
         <h1

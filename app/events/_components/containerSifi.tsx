@@ -66,6 +66,7 @@ export default function SciFiContainer({
         {eventCategories[currentIndex].name}
       </h1>
       <div className="rounded-xl text-white relative   ">{children}</div>
+      <div className="h-[4px] bg-secondary mt2" />
       <div className="self-center p-2 flex space-x-4">
         <Link
           href={`/events/${eventCategories[getPrevIndex()].id}`}

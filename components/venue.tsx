@@ -63,7 +63,7 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
                     width={300}
                     height={300}
                     alt={venue.title}
-                    className="rounded-lg max-w-min h-[200px] lg:max-w-full border-2 border-white shadow-[4px_4px_0_#ff0000,-4px_-4px_0_#00ffff,2px_-2px_0_#ff00ff,-2px_2px_0_#ffff00]"
+                    className="rounded-lg max-w-min h-[200px] lg:max-w-full  shadow-[4px_4px_0_#ff0000,-4px_-4px_0_#00ffff,2px_-2px_0_#ff00ff,-2px_2px_0_#ffff00]"
                   />
                 </Link>
               ))}
@@ -83,7 +83,7 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
                     width={130}
                     height={100}
                     alt={venue.title}
-                    className="rounded-lg h-[100px] max-w-min lg:max-w-full border-2 border-white shadow-[4px_4px_0_#ff0000,-4px_-4px_0_#00ffff,2px_-2px_0_#ff00ff,-2px_2px_0_#ffff00]"
+                    className="rounded-lg h-[100px] max-w-min lg:max-w-full animate-glitch  "
                   />
                 </Link>
               ))}

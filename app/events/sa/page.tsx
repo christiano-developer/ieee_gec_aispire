@@ -8,8 +8,8 @@ const eventsData = [
     subTitle: "",
     imgdet: [" ", " "],
     description:
-      "Connect with top companies from across India, meet recruiters, and showcase your skills. This is your chance to network, impress, and secure your dream job. Are you ready to take the next step?",
-    buttonlink: "/",
+      "Connect with top companies from across India, meet recruiters, and showcase your skills. This is your chance to network, impress, and secure your dream job. Stay tuned for updates—don't miss this opportunity to take the next step in your career!",
+
     className: "text-sm",
     eventdet: "",
     img: "placement",
@@ -24,7 +24,6 @@ const eventsData = [
     description:
       "Join an inspiring summit dedicated to empowering women in STEM! Engage in dynamic discussions, explore new opportunities, and gain insights to boost your leadership potential. Connect with industry leaders, share ideas, and be part of the movement driving change in tech and innovation!",
 
-    buttonlink: "/",
     eventdet: "",
     img: "women_summit",
     imgAlt: "Line Follower Robot Event",
@@ -38,7 +37,6 @@ const eventsData = [
     description:
       "Gain insights from industry leaders, expand your horizons, and ignite your potential. Learn from the best as they share expertise, ideas, and innovations that shape the future. Don’t miss this opportunity to grow and get inspired!",
 
-    buttonlink: "/",
     eventdet: "",
     img: "expert_talks",
     imgAlt: "Line Follower Robot Event",

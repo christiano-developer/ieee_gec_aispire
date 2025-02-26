@@ -18,7 +18,7 @@ interface Event {
   description: string;
   imgdet?: string[];
   linkLabel?: string;
-  buttonlink: string;
+  buttonlink?: string;
   eventdet: string;
   img: string;
   imgAlt: string;
@@ -36,8 +36,9 @@ const EventsList: React.FC<EventsListProps> = ({ events }) => {
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () =>
-      setCurrentIndex((prev) => Math.min(prev + 1, events.length - 1)),
-    onSwipedRight: () => setCurrentIndex((prev) => Math.max(prev - 1, 0)),
+      setCurrentIndex((prev) => (prev === events.length - 1 ? 0 : prev + 1)),
+    onSwipedRight: () =>
+      setCurrentIndex((prev) => (prev === 0 ? events.length - 1 : prev - 1)),
     preventScrollOnSwipe: true,
     trackMouse: true,
   });
@@ -67,18 +68,24 @@ const EventsList: React.FC<EventsListProps> = ({ events }) => {
         </div>
         {/* Toggle Buttons placed outside the card area */}
         <button
-          onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
-          className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+          onClick={() =>
+            setCurrentIndex((prev) =>
+              prev === 0 ? events.length - 1 : prev - 1,
+            )
+          }
+          className={`absolute left-[-20px] top-1/2 transform -translate-y-1/2 text-[#hC8374] rounded-full text-7xl ${pixel.className}`}
         >
-          Prev
+          &lt;
         </button>
         <button
           onClick={() =>
-            setCurrentIndex((prev) => Math.min(prev + 1, events.length - 1))
+            setCurrentIndex((prev) =>
+              prev === events.length - 1 ? 0 : prev + 1,
+            )
           }
-          className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+          className={`absolute right-[-30px] top-1/2 transform -translate-y-1/2 text-[#hC8374] text-7xl rounded-full ${pixel.className}`}
         >
-          Next
+          &gt;
         </button>
       </div>
 

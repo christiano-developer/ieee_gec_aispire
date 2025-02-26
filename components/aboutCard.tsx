@@ -23,7 +23,7 @@ interface CardProps {
 const AboutCard: React.FC<CardProps> = ({ className, vid }) => {
   return (
     <div
-      className={`mx-4 lg:mx-0 lg:flex rounded-xl hover:scale-105 lg:w-full bg-gradient-to-b from-[#1B4242] to-[#5C8374] lg:space-x-6  overflow-hidden transition-all duration-700 ${className}`}
+      className={`mx-4 lg:mx-0 lg:flex rounded-xl hover:scale-105 lg:w-full bg-gradient-to-b from-[#1B4242] to-[#5F8880] lg:space-x-6  overflow-hidden transition-all duration-700 ${className}`}
     >
       <div className="lg:w-1/2 h-auto w-full shadow-xl   transition-all duration-500 ">
         <video className="w-full rounded-xl" playsInline autoPlay muted loop>
