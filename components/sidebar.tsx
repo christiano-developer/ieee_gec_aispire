@@ -17,7 +17,6 @@ const SidePanel: React.FC<sideProps> = ({ links = [], className }) => {
     { href: "/", label: "Home" },
     { href: "/events/ra", label: "Events" },
     { href: "/schedule", label: "Schedule" },
-
     { href: "/contact", label: "Contact Us" },
   ];
 

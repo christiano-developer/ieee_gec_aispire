@@ -31,7 +31,33 @@ interface EventCardProps {
   imgW: number;
   imgH: number;
   className?: string;
+  pdf?: string;
 }
+
+interface PDFOverlayProps {
+  pdf?: string;
+  onClose: () => void;
+}
+
+const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose, pdf }) => {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div className="bg-white rounded shadow-lg max-w-4xl w-full relative">
+        <button
+          onClick={onClose}
+          className="absolute right-2 text-secondary hover:text-gray-800 text-5xl"
+        >
+          &times;
+        </button>
+        <iframe
+          src={pdf}
+          title="PDF Viewer"
+          className="w-full h-screen rounded-b py-10 bg-primary"
+        />
+      </div>
+    </div>
+  );
+};
 
 const EventCard: React.FC<EventCardProps> = ({
   title,
@@ -45,10 +71,12 @@ const EventCard: React.FC<EventCardProps> = ({
   imgW,
   imgH,
   className,
+  pdf,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
 
   // For portal usage (client-side only)
   useEffect(() => {
@@ -83,7 +111,17 @@ const EventCard: React.FC<EventCardProps> = ({
         >
           ✖
         </Button>
-
+        {/*<div className="z-40 top-10 left-96 text-white px-3 py-1 bg-primary border-2 border-secondary rounded-lg hover:scale-105 transition-all duration-500">
+          <Button
+            onPress={() => setShowOverlay(true)}
+            className={` active:scale-90 hover:scale-110 bg-gradient-to-b from-[#9EC8B9] to-[#092635] font-hacked  lg:px-6 px-2 lg:py-2 py-1 border border-[#9EC8B9] rounded-xl hover:bg-white transition-all duration-500 ${className}`}
+          >
+            {pdf}
+          </Button>
+        </div>
+        {pdf && showOverlay && (
+          <PDFOverlay pdf={pdf} onClose={() => setShowOverlay(false)} />
+        )} */}
         {/* Swipeable Image Container */}
         <div
           {...swipeHandlers}
@@ -228,6 +266,9 @@ const EventCard: React.FC<EventCardProps> = ({
             )}
           </div>
         </div>
+        {pdf && showOverlay && (
+          <PDFOverlay pdf={pdf} onClose={() => setShowOverlay(false)} />
+        )}
       </div>
 
       {/* Render the modal via a portal only when open */}

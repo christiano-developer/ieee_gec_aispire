@@ -99,20 +99,20 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-primary min-h-screen text-white lg:px-16 pt-10 lg:pt-0">
+    <div className="bg-primary min-h-screen text-white lg:px-16 pt-8 lg:pt-0">
       <Image
         alt="Mountains"
         src={"/bghome.png"}
         quality={100}
         fill={true}
-        className="opacity-15 "
+        className="opacity-10 "
         style={{ objectFit: "cover" }}
       />
 
       <div className="lg:px-8 content-center min-h-screen ">
         <div className="lg:flex lg:flex-row lg:justify-between  flex-col justify-center items-center lg:mt-0">
           <div
-            className={`text-center text-3xl lg:text-6xl tracking-wide text-white`}
+            className={`md:grid md:grid-rows-2 md:gap-4 lg:flex lg:flex-col lg:gap-0 place-items-center`}
           >
             <Image
               src={"/AiSPIRE_logo_white.png"}
@@ -162,7 +162,7 @@ export default function Home() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 1.0 }}
         variants={scrollAnimation}
       >
@@ -172,11 +172,11 @@ export default function Home() {
         />
       </motion.div>
 
-      <div className="relative  flex flex-col justify-center  items-center mt-10 lg:mt-24 lg:mb-10">
+      <div className="relative  flex flex-col justify-center   items-center mt-10 lg:mt-24 lg:mb-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
@@ -197,7 +197,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
@@ -208,7 +208,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
@@ -225,7 +225,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
@@ -245,7 +245,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
@@ -255,12 +255,12 @@ export default function Home() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 1.0 }}
         variants={scrollAnimation}
         className="relative mb-10 flex flex-col items-center justify-center lg:px-0  lg:scale-100 "
       >
-        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.8]   top-10 lg:scale-[1.25]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
+        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.8] opacity-70   top-10 lg:scale-[1.25]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
         <ContactCard className="relative shadow-md shadow-black lg:scale-100 scale-95" />
       </motion.div>
     </div>

@@ -7,7 +7,7 @@ const eventsData = [
     title: "The Labyrinth",
     subTitle: "Line Follower Robot",
     description:
-      "Control your robot, outmaneuver opponents, and score goals while defending your own! Speed, strategy, and precision will crown the ultimate champion. Are you ready for the challenge?",
+      "Put your robotics skills to the test! Build and program your Line Follower Robot (LFR) to autonomously follow a track, navigate sharp turns, and race against time. Do you have what it takes to win?",
     linkLabel: "Event Details",
     imgdet: ["LFR_pg1", "LFR_pg2"],
     buttonlink:
@@ -23,7 +23,7 @@ const eventsData = [
     subTitle: "Robo Soccer",
     imgdet: ["robo_soccer_1", "robo_soccer_2"],
     description:
-      "Put your robotics skills to the test! Build and program your Line Follower Robot (LFR) to autonomously follow a track, navigate sharp turns, and race against time. Do you have what it takes to win?",
+      "Control your robot, outmaneuver opponents, and score goals while defending your own! Speed, strategy, and precision will crown the ultimate champion. Are you ready for the challenge?",
     linkLabel: "Event Details",
     buttonlink:
       "https://docs.google.com/forms/d/e/1FAIpQLScSLfYV87kPsPkaDb1RmSo1zYyVj5n-SZIH8h0YFS8hH42tPA/viewform?usp=header",

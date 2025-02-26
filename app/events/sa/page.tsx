@@ -5,7 +5,7 @@ import EventsList from "../_components/eventsList";
 const eventsData = [
   {
     title: "Placement Bootcamp",
-    subTitle: "",
+    subTitle: "Details Will Be Out Soon",
     imgdet: [" ", " "],
     description:
       "Connect with top companies from across India, meet recruiters, and showcase your skills. This is your chance to network, impress, and secure your dream job. Stay tuned for updates—don't miss this opportunity to take the next step in your career!",

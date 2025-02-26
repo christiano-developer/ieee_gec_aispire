@@ -59,7 +59,7 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
 
           {/* Social Icons */}
           <div className="flex items-center space-x-4 lg:space-x-6">
-            <Link href="https://instagram.com" target="_blank">
+            <Link href="https://www.instagram.com/ieeegec" target="_blank">
               <svg
                 className="w-8 h-8 lg:w-10 lg:h-10 hover:scale-110 transition"
                 viewBox="0 0 48 48"
@@ -87,7 +87,7 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
                 </defs>
               </svg>
             </Link>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link href="https://www.linkedin.com/company/ieeegec/">
               <svg
                 className="w-8 h-8 lg:w-10 lg:h-10 hover:scale-110 transition"
                 viewBox="0 0 48 48"
@@ -136,7 +136,7 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
 
           {/* Social Icons */}
           <div className="flex items-center space-x-2 lg:space-x-6">
-            <Link href="https://instagram.com" target="_blank">
+            <Link href="https://www.instagram.com/ieeegec" target="_blank">
               <svg
                 className="w-5 h-5 lg:w-10 lg:h-10 hover:scale-110 transition"
                 viewBox="0 0 48 48"
@@ -164,7 +164,10 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
                 </defs>
               </svg>
             </Link>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link
+              href="https://www.linkedin.com/company/ieeegec/"
+              target="_blank"
+            >
               <svg
                 className="w-5 h-5 lg:w-10 lg:h-10 hover:scale-110 transition"
                 viewBox="0 0 48 48"

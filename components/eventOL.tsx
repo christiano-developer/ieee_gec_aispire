@@ -48,7 +48,7 @@ const EventCard: React.FC<EventCardProps> = ({
             />
             <div className="absolute inset-0 flex flex-col justify-center lg:justify-normal  lg:px-2 lg:py-10 ">
               <h2
-                className={`text-white font-extrabold text-xl lg:text-3xl text-center tracking-wider uppercase ${hacked.className}`}
+                className={`text-white drop-shadow-2xl shadow-pink-500 font-extrabold text-xl lg:text-3xl text-center tracking-wider uppercase ${hacked.className}`}
               >
                 {title}
               </h2>

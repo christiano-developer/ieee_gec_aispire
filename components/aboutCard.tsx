@@ -25,8 +25,8 @@ const AboutCard: React.FC<CardProps> = ({ className, vid }) => {
     <div
       className={`mx-4 lg:mx-0 lg:flex rounded-xl hover:scale-105 lg:w-full bg-gradient-to-b from-[#1B4242] to-[#5F8880] lg:space-x-6  overflow-hidden transition-all duration-700 ${className}`}
     >
-      <div className="lg:w-1/2 h-auto w-full shadow-xl   transition-all duration-500 ">
-        <video className="w-full rounded-xl" playsInline autoPlay muted loop>
+      <div className="lg:w-1/2  w-full shadow-xl   transition-all duration-500 ">
+        <video className="w-full  rounded-xl" playsInline autoPlay muted loop>
           <source src={vid} type="video/mp4" />
         </video>
       </div>
@@ -39,7 +39,7 @@ const AboutCard: React.FC<CardProps> = ({ className, vid }) => {
         </h1>
 
         <p
-          className={`text-left lg:px-4 lg:text-[11pt] tracking-tighter leading-tight px-8 pb-5  text-sm ${inconso.className}`}
+          className={`text-left lg:px-4 lg:text-[13pt] tracking-tighter leading-[19px] px-8 pb-5 lg:pb-0  text-sm ${inconso.className}`}
         >
           AiSPIRE 2025, hosted by Goa College of Engineering, is set to be the
           biggest tech event in India, showcasing cutting-edge domains like AI,

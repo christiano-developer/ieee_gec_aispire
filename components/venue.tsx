@@ -41,14 +41,14 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
       {Img.map((venue, index) => (
         <div
           key={index}
-          className="text-white w-full max-w-5xl lg:space-y-4 lg:mb-4 py-5"
+          className="text-white w-full max-w-5xl lg:space-y-4 lg:mb-4 pt-4"
         >
           <h1 className="text-3xl lg:text-left py-2 text-center font-bold">
             DAY {index + 1}:
           </h1>
 
           {/* Flex container for images & text */}
-          <div className="lg:flex lg:flex-row flex-col items-center lg:justify-between lg:gap-6">
+          <div className="lg:flex lg:flex-row flex-col items-center  lg:justify-between lg:gap-6">
             {/* Images for large screens */}
             <div className="hidden lg:flex lg:gap-10 justify-center ">
               {venue.img.map((img, imgIndex) => (
@@ -63,7 +63,7 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
                     width={300}
                     height={300}
                     alt={venue.title}
-                    className="rounded-lg max-w-min h-[200px] lg:max-w-full  shadow-[4px_4px_0_#ff0000,-4px_-4px_0_#00ffff,2px_-2px_0_#ff00ff,-2px_2px_0_#ffff00]"
+                    className="rounded-lg max-w-min h-[200px] lg:max-w-full  animate-glitch"
                   />
                 </Link>
               ))}
@@ -76,7 +76,6 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
                   href={venue.buttonLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  as="a"
                 >
                   <Image
                     src={img}
