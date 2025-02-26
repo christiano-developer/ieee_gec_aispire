@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import Icon from "/public/icon.ico";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navBar";
 
 export const metadata: Metadata = {
   title: "Aispire",
   description: "IEEE @ GEC",
-  icons: {
-    icon: "/baricon/favicon.svg",
-    shortcut: "/baricon/favicon.svg",
-    apple: "/baricon/apple-touch-icon.png",
-  },
+  icons: [{ rel: "icon", url: Icon.src }],
 };
 
 const navLinks = [
