@@ -42,7 +42,7 @@ export default function SciFiContainer({
 
   return (
     <div
-      className={` relative flex flex-col w-screen max-w-7xl mx-auto border-4 border-secondary rounded-xl bg-black/50 ${className}`}
+      className={`relative w-screen flex flex-col  lg:mx-auto lg:max-w-7xl border-4 border-secondary rounded-xl bg-black/50 ${className}`}
     >
       <nav className="flex lg:justify-start -my-1 lg:-my-0 justify-between lg:space-x-8 rounded-tl-lg rounded-tr-lg bg-black/10 lg:p-0 px-2 lg:px-10">
         {eventCategories.map((category, index) => (

@@ -179,7 +179,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <>
       <div
-        className={`flex flex-col justify-between lg:w-80 border-2 border-secondary lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#1B4242] lg:my-5 lg:p-4 p-2 lg:py-4 bg-white shadow-inner shadow-black`}
+        className={`flex flex-col lg:h-[34rem] justify-between lg:w-80 border-2 border-secondary lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#1B4242] lg:my-5 lg:p-4 p-2 lg:py-4 bg-white shadow-inner shadow-black`}
       >
         <h1
           className={`text-xl font-bold text-center whitespace-nowrap ${className} ${pixel.className}`}
@@ -196,7 +196,9 @@ const EventCard: React.FC<EventCardProps> = ({
           />
         </div>
         {subTitle && (
-          <h3 className={`${pixel.className} text-md text-center`}>
+          <h3
+            className={`${pixel.className} text-lg tracking-tighter text-center`}
+          >
             {subTitle}
           </h3>
         )}

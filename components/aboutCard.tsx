@@ -23,38 +23,34 @@ interface CardProps {
 const AboutCard: React.FC<CardProps> = ({ className, vid }) => {
   return (
     <div
-      className={`lg:flex rounded-xl hover:scale-105 lg:w-full bg-gradient-to-b from-[#1B4242] to-[#5C8374] lg:space-x-6  overflow-hidden transition-all duration-700 ${className}`}
+      className={`mx-4 lg:mx-0 lg:flex rounded-xl hover:scale-105 lg:w-full bg-gradient-to-b from-[#1B4242] to-[#5C8374] lg:space-x-6  overflow-hidden transition-all duration-700 ${className}`}
     >
-      <div className="lg:w-1/2 w-full shadow-xl shadow-black rounded-xl  transition-all duration-500">
-        <video
-          className="w-full h-auto rounded-xl"
-          playsInline
-          autoPlay
-          muted
-          loop
-        >
+      <div className="lg:w-1/2 h-auto w-full shadow-xl   transition-all duration-500 ">
+        <video className="w-full rounded-xl" playsInline autoPlay muted loop>
           <source src={vid} type="video/mp4" />
         </video>
       </div>
 
       <div className="lg:w-1/2 w-full p-4">
         <h1
-          className={`${hacked.className} lg:px-4 text-center my-2  lg:text-6xl text-2xl`}
+          className={`${hacked.className} lg:px-4 text-center my-2  lg:text-6xl text-5xl`}
         >
           About Aispre
         </h1>
 
         <p
-          className={`text-left lg:px-4 lg:text-[11pt] text-sm ${inconso.className}`}
+          className={`text-left lg:px-4 lg:text-[11pt] tracking-tighter leading-tight px-8 pb-5  text-sm ${inconso.className}`}
         >
-          The IEEE Computer Society, a premier organization under the Institute
-          of Electrical and Electronics Engineers (IEEE), is dedicated to
-          advancing the theory, practice, and application of computer and
-          information processing technology. As the world’s largest technical
-          professional organization, IEEE brings together global expertise to
-          drive innovation. One of its key initiatives, the IEEE High Impact
-          Zonal Events (HIZE), has been inspiring India’s brightest tech
-          minds.....
+          AiSPIRE 2025, hosted by Goa College of Engineering, is set to be the
+          biggest tech event in India, showcasing cutting-edge domains like AI,
+          robotics, and cybersecurity. The event will feature a hardware
+          hackathon, women’s summit, idea pitching, blind coding challenges,
+          project exhibitions, keynote sessions, and engaging competitions. With
+          participation from students nationwide, leading tech corporations, and
+          top tech content creators, this prestigious event will promote
+          innovation, collaboration, and skill development. This partnership
+          between IEEE and GEC aims to strengthen academia-industry ties while
+          delivering an unparalleled experience for all attendees.
         </p>
       </div>
     </div>

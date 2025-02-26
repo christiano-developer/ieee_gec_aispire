@@ -53,7 +53,7 @@ const eventsData = [
     subTitle: "Hardware Hackathon",
     imgdet: ["hardware_1", "hardware_2", "hardware_3", "hardware_4"],
     description:
-      "Design and build an Autonomous or Controlled Search Vehicle to navigate obstacles and identify targets. Showcase speed, precision, and creativity—bonus points for autonomy and sleek design! Are you ready to innovate?",
+      "Unleash your creativity in a 7-hour challenge to build smart automation solutions! Use a microcontroller, sensors, and actuators to push the limits of IoT, collaborate, and compete for exciting prizes. Ready to revolutionize industry?",
     linkLabel: "Event Details",
     buttonlink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdvdioTSxr1joJnIjOXyPFAfug8_zdmxWmAJIt93cXaRPRRTg/viewform?usp=header",

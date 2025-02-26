@@ -3,12 +3,12 @@
 export default function Events() {
   return (
     <svg
-      width="1280"
-      height="1280"
+      width="1440"
+      height="1490"
       viewBox="0 0 1440 1490"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-screen "
+      className="w-screen lg:h-auto h-screen"
     >
       <rect width="1440" height="1490" fill="#092635" />
       <g filter="url(#filter0_d_854_1085)">

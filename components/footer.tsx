@@ -40,7 +40,7 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
   return (
     <>
       <footer
-        className={`lg:block hidden bg-black w-full text-white py-4 px-4 lg:py-6 lg:px-12 relative ${className}`}
+        className={`lg:block hidden bg-black w-full text-white py-4  px-4 lg:py-6 lg:px-12 relative ${className}`}
       >
         <div className="flex items-center justify-between  ">
           {/* Logo Section */}
@@ -121,7 +121,7 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
       >
         <div className="flex items-center justify-between flex-nowrap lg:gap-4">
           {/* Logo Section */}
-          <div className="flex items-center gap-4 lg:gap-6 flex-nowrap overflow-x-auto">
+          <div className="flex items-center gap-2  flex-nowrap overflow-x-auto">
             {footerLogosMobile.map((logo, index) => (
               <Image
                 key={index}

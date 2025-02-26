@@ -1,24 +1,10 @@
-import localFont from "next/font/local";
-
 import ContactCard from "@/components/contact";
-
-const ugs = localFont({
-  src: [
-    { path: "../../public/fonts/UltimateGearSlant.woff2" },
-    { path: "../../public/fonts/UltimateGearSlant.woff" },
-    { path: "../../public/fonts/UltimateGearSlant.ttf" },
-  ],
-});
 
 export default function Events() {
   return (
-    <div className=" bg-[#092635]  py-20 px-10">
-      <span
-        className={`relative text-center text-7xl drop-shadow-xl py-6  tracking-wider text-white ${ugs.className}`}
-      >
-        Contact
-      </span>
-      <ContactCard className="mt-5" />
+    <div className="relative py-44 flex flex-col items-center justify-center  lg:scale-100 lg:px-10 ">
+      <div className="absolute inset-0 lg:max-w-screen-md lg:mx-auto scale-y-[1.8]   lg:top-10 lg:scale-[1.6]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
+      <ContactCard className="relative shadow-md shadow-black lg:scale-100 scale-95" />
     </div>
   );
 }

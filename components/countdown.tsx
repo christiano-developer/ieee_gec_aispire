@@ -11,7 +11,6 @@ const daySeconds = 86400;
 interface countProps {
   className?: string;
 }
-
 const timerProps = {
   isPlaying: true,
   size: 130,
@@ -31,10 +30,12 @@ const getTimeDays = (time: number): number => Math.floor(time / daySeconds);
 // Render the time component for each circle
 const renderTime = (dimension: string, time: number): JSX.Element => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="text-4xl font-bold text-gray-200">{time}</div>
-      <div className="text-sm uppercase text-gray-200">{dimension}</div>
-    </div>
+    <>
+      <div className="flex flex-col items-center">
+        <div className="text-4xl font-bold text-gray-200">{time}</div>
+        <div className="text-sm uppercase text-gray-200">{dimension}</div>
+      </div>
+    </>
   );
 };
 
@@ -42,7 +43,10 @@ const renderTime = (dimension: string, time: number): JSX.Element => {
 const Countdown: React.FC<countProps> = ({ className }) => {
   const startTime = Math.floor(Date.now() / 1000); // Current UNIX timestamp in seconds
   const targetDate = new Date("2025-04-05T17:59:59Z").getTime() / 1000; // Target date in seconds
-  const remainingTime = Math.max(targetDate - startTime, 0); // Remaining time in seconds
+  const remainingTime =
+    Math.max(targetDate - startTime, 0) > 0
+      ? Math.max(targetDate - startTime, 0)
+      : 0; // Remaining time in seconds
   const [isTimerActive, setIsTimerActive] = useState(true);
 
   useEffect(() => {
@@ -57,7 +61,7 @@ const Countdown: React.FC<countProps> = ({ className }) => {
 
   return (
     <div
-      className={`min-h-fit flex space-x-3 items-center justify-center text-gray-800 ${className}`}
+      className={`min-h-fit flex font-mono flex-wrap lg:flex-nowrap gap-8  lg:flex lg:gap-0 lg:space-x-3 justify-center place-items-center  text-gray-800 ${className}`}
     >
       {/* Days Timer */}
       <CountdownCircleTimer
@@ -74,6 +78,7 @@ const Countdown: React.FC<countProps> = ({ className }) => {
           renderTime("Days", getTimeDays(daysDuration - elapsedTime))
         }
       </CountdownCircleTimer>
+
       {/* Hours Timer */}
       <CountdownCircleTimer
         {...timerProps}

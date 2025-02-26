@@ -52,20 +52,34 @@ const EventsList: React.FC<EventsListProps> = ({ events }) => {
       </div>
 
       {/* Mobile */}
-      <div
-        {...swipeHandlers}
-        className="lg:hidden relative w-full overflow-hidden"
-      >
-        <div
-          className="flex transition-transform duration-300 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {events.map((event, index) => (
-            <div key={index} className="w-full flex-shrink-0 px-4">
-              <EventCard {...event} className="w-full max-w-sm mx-auto" />
-            </div>
-          ))}
+      <div className="lg:hidden relative w-full">
+        <div {...swipeHandlers} className="w-full overflow-hidden">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {events.map((event, index) => (
+              <div key={index} className="w-full flex-shrink-0 px-4">
+                <EventCard {...event} className="w-full max-w-sm mx-auto" />
+              </div>
+            ))}
+          </div>
         </div>
+        {/* Toggle Buttons placed outside the card area */}
+        <button
+          onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
+          className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        >
+          Prev
+        </button>
+        <button
+          onClick={() =>
+            setCurrentIndex((prev) => Math.min(prev + 1, events.length - 1))
+          }
+          className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+        >
+          Next
+        </button>
       </div>
 
       {/* Mobile Pagination Indicator */}

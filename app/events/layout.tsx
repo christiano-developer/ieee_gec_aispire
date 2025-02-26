@@ -23,10 +23,10 @@ export default function EventsLayout({
         width={500}
         height={10}
         alt="events"
-        className="py-10 relative"
+        className="px-10 pt-12 relative"
       />
 
-      <main className="min-h-screen ">
+      <main className="min-h-screen scale-90">
         <SciFiContainer className="h-auto">{children}</SciFiContainer>
       </main>
     </div>

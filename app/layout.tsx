@@ -46,8 +46,8 @@ export default function RootLayout({
           navLinks={navLinks}
           className="fixed z-50 h-16 text-white bg-[#1b1b1a]/10  lg:backdrop-blur-md min-w-[100%] lg:space-x-20 space-x-5 "
         />
-        {children}
-        <Footer />
+        <div className="h-fit">{children}</div>
+        <Footer className="lg:mt-20 w-full" />
       </body>
     </html>
   );

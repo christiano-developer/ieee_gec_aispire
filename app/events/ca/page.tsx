@@ -61,9 +61,5 @@ const eventsData = [
 ];
 
 export default function Events() {
-  return (
-    <div className="flex flex-col justify-center items-center">
-      <EventsList events={eventsData} />
-    </div>
-  );
+  return <EventsList events={eventsData} />;
 }
