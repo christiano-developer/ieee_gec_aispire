@@ -43,29 +43,41 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
           key={index}
           className="text-white w-full max-w-5xl lg:space-y-4 lg:mb-4 py-5"
         >
-          <h1 className="text-3xl lg:text-left  py-2 text-center font-bold">
+          <h1 className="text-3xl lg:text-left py-2 text-center font-bold">
             DAY {index + 1}:
           </h1>
 
           {/* Flex container for images & text */}
           <div className="lg:flex lg:flex-row flex-col items-center lg:justify-between lg:gap-6">
-            {/* Images */}
+            {/* Images for large screens */}
             <div className="hidden lg:flex lg:gap-10 justify-center ">
               {venue.img.map((img, imgIndex) => (
-                <Link key={imgIndex} href={venue.buttonLink} about="_blank">
+                <Link
+                  key={imgIndex}
+                  href={venue.buttonLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
                     src={img}
                     width={300}
                     height={300}
                     alt={venue.title}
-                    className="rounded-lg max-w-min  h-[200px] lg:max-w-full border-2 border-white shadow-[4px_4px_0_#ff0000,-4px_-4px_0_#00ffff,2px_-2px_0_#ff00ff,-2px_2px_0_#ffff00]"
+                    className="rounded-lg max-w-min h-[200px] lg:max-w-full border-2 border-white shadow-[4px_4px_0_#ff0000,-4px_-4px_0_#00ffff,2px_-2px_0_#ff00ff,-2px_2px_0_#ffff00]"
                   />
                 </Link>
               ))}
             </div>
+            {/* Images for smaller screens */}
             <div className="lg:hidden flex gap-8 justify-center my-6">
               {venue.img.map((img, index) => (
-                <Link key={index} href={venue.buttonLink} target="_blank">
+                <Link
+                  key={index}
+                  href={venue.buttonLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  as="a"
+                >
                   <Image
                     src={img}
                     width={130}
@@ -77,12 +89,12 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
               ))}
             </div>
 
-            {/* Venue Details - Flex-1 prevents overflow */}
-            <div className="min-w-[200px] lg:max-w-[300px]  space-y-2 my-5">
-              <h2 className="lg:text-xl text-sm font-semibold  text-center">
+            {/* Venue Details */}
+            <div className="min-w-[200px] lg:max-w-[300px] space-y-2 my-5">
+              <h2 className="lg:text-xl text-sm font-semibold text-center">
                 {venue.title}
               </h2>
-              <p className="text-xs text-center px-10">{venue.loci} </p>
+              <p className="text-xs text-center px-10">{venue.loci}</p>
             </div>
           </div>
         </div>
