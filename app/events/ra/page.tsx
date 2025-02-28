@@ -17,6 +17,8 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["Registration Fees: Rs 300/-"],
+    brshLink: "TheLabyrinth",
   },
   {
     title: "Robo Cup",
@@ -32,6 +34,8 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["Registration Fees: Rs 300/-"],
+    brshLink: "RoboCup",
   },
   {
     title: "Robo Derby",
@@ -47,6 +51,8 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["Registration Fees: Rs 300/-"],
+    brshLink: "RoboDerby",
   },
   {
     title: "Hardware Hustle",
@@ -62,6 +68,8 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["IEEE Fees: Rs.250/-", "Non-IEEE Fees: Rs.500/-"],
+    brshLink: "HardwareHustle",
   },
 ];
 

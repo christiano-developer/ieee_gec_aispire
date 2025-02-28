@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Link from "next/link";
 
 const hacked = localFont({
   src: "../public/fonts/subset-HACKED.woff2",
@@ -9,10 +10,19 @@ interface cardProps {
 }
 const ContactCard: React.FC<cardProps> = ({ className }) => {
   const contacts = [
-    "Vibhav Shivadekar: +91 82378 50501",
-    "Dakshat Patil: +91 86690 72165",
-    "Dhruv Prabhugaonkar : +91 93599 87813",
-    "Onkar Dabhade: +91 82087 54019",
+    {
+      cont: "Vibhav Shivadekar: +91 82378 50501",
+      link: "https://wa.me/+918237850501?text=Aispire%202025!",
+    },
+
+    {
+      cont: "Dhruv Prabhugaonkar : +91 93599 87813",
+      link: "https://wa.me/+919359987813?text=Aispire%202025!",
+    },
+    {
+      cont: "Onkar Dabhade: +91 82087 54019",
+      link: "https://wa.me/+918208754019?text=Aispire%202025!",
+    },
   ];
   return (
     <div
@@ -29,12 +39,11 @@ const ContactCard: React.FC<cardProps> = ({ className }) => {
           Have questions or need assistance? Were here to help!
         </p>
         {contacts.map((contact, index) => (
-          <p
-            key={index}
-            className="lg:my-2 lg:py-2  my-1 text-xs lg:text-[18pt]"
-          >
-            {contact}
-          </p>
+          <Link key={index} href={contact.link} target="_blank">
+            <p className="lg:my-2 lg:py-2  my-1 text-xs lg:text-[18pt] underline underline-offset-4">
+              {contact.cont}
+            </p>
+          </Link>
         ))}
         <p className="lg:my-4 lg:mt-10 my-2 lg:text-[19pt] text-sm">
           Or mail us at: ieeegecsb@gec.ac.in

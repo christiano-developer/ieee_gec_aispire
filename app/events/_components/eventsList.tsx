@@ -18,6 +18,7 @@ interface Event {
   description: string;
   imgdet?: string[];
   linkLabel?: string;
+  joinNow?: string;
   buttonlink?: string;
   eventdet: string;
   img: string;
@@ -25,6 +26,8 @@ interface Event {
   imgW: number;
   imgH: number;
   className?: string;
+  fee?: string[];
+  brshLink?: string;
 }
 
 interface EventsListProps {
@@ -46,7 +49,7 @@ const EventsList: React.FC<EventsListProps> = ({ events }) => {
   return (
     <div className="rounded-lg drop-shadow-xl px-8 w-full">
       {/* Desktop Grid View */}
-      <div className="hidden lg:flex lg:flex-row-cols lg:justify-center lg:gap-4">
+      <div className="hidden lg:flex lg:flex-row lg:justify-evenly lg:gap-4">
         {events.map((event, index) => (
           <EventCard key={index} {...event} />
         ))}

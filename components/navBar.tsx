@@ -45,9 +45,9 @@ const Navbar: React.FC<NavbarProps> = ({ className, navLinks }) => {
             <Image
               src={navLink.hoverImg}
               alt={`${navLink.nLabel} hover image`}
-              width={80}
-              height={50}
-              className="absolute top-6 "
+              width={100}
+              height={100}
+              className="absolute top-8 scale-150"
             />
           )}
         </div>

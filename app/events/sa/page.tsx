@@ -7,13 +7,14 @@ const eventsData = [
     title: "Placement Bootcamp",
     subTitle: "Details Will Be Out Soon",
     imgdet: [" ", " "],
+
     description:
       "Connect with top companies from across India, meet recruiters, and showcase your skills. This is your chance to network, impress, and secure your dream job. Stay tuned for updates—don't miss this opportunity to take the next step in your career!",
 
-    className: "text-sm",
     eventdet: "",
     img: "placement",
-    imgAlt: "Line Follower Robot Event",
+    imgAlt: "placement",
+
     imgW: 0,
     imgH: 0,
   },
@@ -26,9 +27,11 @@ const eventsData = [
 
     eventdet: "",
     img: "women_summit",
-    imgAlt: "Line Follower Robot Event",
+    imgAlt: "women_summit",
     imgW: 0,
     imgH: 0,
+    joinNow: "JOIN NOW",
+    buttonlink: "https://chat.whatsapp.com/Dd7N09mPOsM5YNLEDwRs6a",
   },
   {
     title: "Expert Talks",
@@ -39,9 +42,11 @@ const eventsData = [
 
     eventdet: "",
     img: "expert_talks",
-    imgAlt: "Line Follower Robot Event",
+    imgAlt: "expert_talks",
     imgW: 0,
     imgH: 0,
+    joinNow: "JOIN NOW",
+    buttonlink: "https://chat.whatsapp.com/Dd7N09mPOsM5YNLEDwRs6a",
   },
 ];
 

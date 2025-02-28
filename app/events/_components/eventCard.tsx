@@ -1,3 +1,4 @@
+"use client";
 import { Nunito } from "next/font/google";
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
@@ -26,38 +27,16 @@ interface EventCardProps {
   imgdet?: string[];
   linkLabel?: string;
   buttonlink?: string;
+  joinNow?: string;
   img: string;
   imgAlt: string;
   imgW: number;
   imgH: number;
   className?: string;
   pdf?: string;
+  fee?: string[];
+  brshLink?: string;
 }
-
-interface PDFOverlayProps {
-  pdf?: string;
-  onClose: () => void;
-}
-
-const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose, pdf }) => {
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white rounded shadow-lg max-w-4xl w-full relative">
-        <button
-          onClick={onClose}
-          className="absolute right-2 text-secondary hover:text-gray-800 text-5xl"
-        >
-          &times;
-        </button>
-        <iframe
-          src={pdf}
-          title="PDF Viewer"
-          className="w-full h-screen rounded-b py-10 bg-primary"
-        />
-      </div>
-    </div>
-  );
-};
 
 const EventCard: React.FC<EventCardProps> = ({
   title,
@@ -65,18 +44,18 @@ const EventCard: React.FC<EventCardProps> = ({
   description,
   imgdet,
   buttonlink,
+  joinNow,
   linkLabel,
+  fee,
   img,
   imgAlt,
   imgW,
   imgH,
-  className,
-  pdf,
+  brshLink,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false);
 
   // For portal usage (client-side only)
   useEffect(() => {
@@ -92,11 +71,26 @@ const EventCard: React.FC<EventCardProps> = ({
     preventScrollOnSwipe: true,
     trackMouse: true,
   });
+  const handleDownload = () => {
+    const fileUrl = `/ERB/${brshLink}.pdf`; // Path to your PDF in the public folder
+    const fileName = `${brshLink}`;
+    // The name for the downloaded file
+    console.log(fileUrl);
+    // Create a temporary link element
+    const linkT = document.createElement("a");
+    linkT.href = fileUrl;
+    linkT.setAttribute("download", fileName);
+
+    // Append to the document, trigger the download, then remove the element
+    document.body.appendChild(linkT);
+    linkT.click();
+    document.body.removeChild(linkT);
+  };
 
   // The modal content is rendered in a portal (to document.body)
   const modalContent = (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-transparent/50 z-50"
+      className="fixed inset-0 flex items-center justify-center bg-primary/70 z-50"
       onClick={() => setModalOpen(false)}
     >
       <div
@@ -107,21 +101,30 @@ const EventCard: React.FC<EventCardProps> = ({
         {/* Close Button */}
         <Button
           onPress={() => setModalOpen(false)}
-          className="z-40 top-10 left-96 text-white px-3 py-1 bg-primary border-2 border-secondary rounded-lg hover:scale-105 transition-all duration-500"
+          className=" top-4  z-40 text-white w-fit px-3 py-1 bg-primary border-2 border-secondary rounded-lg hover:scale-105 transition-all duration-500 lg:top-10 lg:left-96"
         >
           ✖
         </Button>
-        {/*<div className="z-40 top-10 left-96 text-white px-3 py-1 bg-primary border-2 border-secondary rounded-lg hover:scale-105 transition-all duration-500">
+        {brshLink && (
           <Button
-            onPress={() => setShowOverlay(true)}
-            className={` active:scale-90 hover:scale-110 bg-gradient-to-b from-[#9EC8B9] to-[#092635] font-hacked  lg:px-6 px-2 lg:py-2 py-1 border border-[#9EC8B9] rounded-xl hover:bg-white transition-all duration-500 ${className}`}
+            onPress={handleDownload}
+            className="bottom-5 left-16 z-40 lg:top-[50px] lg:left-96"
           >
-            {pdf}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              className="bg-secondary scale-110 rounded-full hover:bg-white hover:scale-125 transition duration-500"
+            >
+              <g>
+                <path d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z" />
+                <polygon points="13 13.586 13 8 11 8 11 13.586 8.707 11.293 7.293 12.707 12 17.414 16.707 12.707 15.293 11.293 13 13.586" />
+              </g>
+            </svg>
           </Button>
-        </div>
-        {pdf && showOverlay && (
-          <PDFOverlay pdf={pdf} onClose={() => setShowOverlay(false)} />
-        )} */}
+        )}
+
         {/* Swipeable Image Container */}
         <div
           {...swipeHandlers}
@@ -178,7 +181,6 @@ const EventCard: React.FC<EventCardProps> = ({
               ))}
           </div>
         </div>
-
         {/* Desktop Navigation Buttons */}
         <div className="hidden lg:flex absolute top-1/2 transform -translate-y-1/2 w-full justify-between px-80 z-20">
           <Button
@@ -200,12 +202,10 @@ const EventCard: React.FC<EventCardProps> = ({
             Next
           </Button>
         </div>
-
         {/* Pagination Indicator for Desktop */}
         <div className={`hidden lg:block text-center mt-2 ${pixel.className}`}>
           {imgdet ? currentIndex + 1 : 0}/{imgdet ? imgdet.length : 0}
         </div>
-
         {/* Pagination Indicator for Mobile */}
         <div className={`lg:hidden text-center mt-2 ${pixel.className}`}>
           {imgdet ? currentIndex + 1 : 0}/{imgdet ? imgdet.length : 0}
@@ -217,10 +217,10 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <>
       <div
-        className={`flex flex-col h-[34rem] justify-between lg:w-80 border-2 border-secondary lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#315354] lg:my-5 lg:p-4 p-2 lg:py-4 bg-white shadow-inner shadow-black`}
+        className={`flex flex-col h-[34rem] justify-center lg:w-80 border-2 border-secondary lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#315354] lg:my-5 lg:p-4 p-2 lg:py-4 bg-white shadow-inner shadow-black`}
       >
         <h1
-          className={`text-xl font-bold text-center whitespace-nowrap ${className} ${pixel.className}`}
+          className={`lg:text-xl  font-bold text-center whitespace-nowrap  ${pixel.className}`}
         >
           {title}
         </h1>
@@ -240,10 +240,23 @@ const EventCard: React.FC<EventCardProps> = ({
             {subTitle}
           </h3>
         )}
-        <div className={`${nunito.className} flex-1 flex flex-col`}>
-          <p className="text-sm text-white mb-6 text-center flex-grow font-mono">
+        <div
+          className={`${nunito.className} flex-1 flex flex-col justify-center items-center`}
+        >
+          <p className="text-sm text-white mb-6 leading-snug text-center flex-grow font-extralight">
             {description}
           </p>
+          <div className="flex-grow flex flex-col text-xs hover:scale-125 transition-all w-fit duration-500  items-center mb-2">
+            {fee &&
+              fee.map((fee, index) => (
+                <p
+                  className="text-yellow-300/90 font-extrabold  text-sm text-center  font-mono"
+                  key={index}
+                >
+                  {fee}
+                </p>
+              ))}
+          </div>
           <div className="flex justify-center items-center mt-auto space-x-1">
             {buttonlink && (
               <Button
@@ -251,24 +264,21 @@ const EventCard: React.FC<EventCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 href={buttonlink}
-                className="py-1 px-2 text-[16px] h-fit w-fit text-center bg-primary text-secondary border-2 border-secondary rounded hover:bg-white hover:scale-110 transition-all duration-700"
+                className="py-1 px-2 text-[16px] h-fit w-fit text-center bg-primary text-secondary border-2 border-secondary rounded hover:bg-secondary hover:text-primary hover:scale-110 transition-all duration-700"
               >
-                Register Now!
+                <p className="text-sm">{joinNow || "Register Now!"}</p>
               </Button>
             )}
             {linkLabel && (
               <Button
                 onPress={() => setModalOpen(true)}
-                className="self-center underline text-xs"
+                className="self-center underline text-xs hover:scale-125 transition-all duration-500"
               >
                 {linkLabel}
               </Button>
             )}
           </div>
         </div>
-        {pdf && showOverlay && (
-          <PDFOverlay pdf={pdf} onClose={() => setShowOverlay(false)} />
-        )}
       </div>
 
       {/* Render the modal via a portal only when open */}

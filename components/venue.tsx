@@ -35,15 +35,12 @@ const Img = [
 const Venue: React.FC<VenueProps> = ({ className }) => {
   return (
     <div
-      className={`${pixel.className} flex flex-col justify-center items-center w-full lg:h-screen bg-cover bg-center bg-no-repeat border-4 rounded-2xl border-secondary lg:p-6 overflow-hidden ${className}`}
+      className={`${pixel.className} flex flex-col justify-center space-y-8 items-center w-full  bg-cover bg-center bg-no-repeat border-4 rounded-2xl border-secondary overflow-hidden ${className}`}
       style={{ backgroundImage: `url('/venue/venue_black_bg.png')` }}
     >
       {Img.map((venue, index) => (
-        <div
-          key={index}
-          className="text-white w-full max-w-5xl lg:space-y-4 lg:mb-4 pt-4"
-        >
-          <h1 className="text-3xl lg:text-left py-2 text-center font-bold">
+        <div key={index} className="text-white w-full max-w-5xl  lg:mb-4 ">
+          <h1 className="text-3xl lg:text-left text-center lg:mb-6 font-bold">
             DAY {index + 1}:
           </h1>
 
@@ -90,7 +87,7 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
 
             {/* Venue Details */}
             <div className="min-w-[200px] lg:max-w-[300px] space-y-2 my-5">
-              <h2 className="lg:text-xl text-sm font-semibold text-center">
+              <h2 className="lg:text-xl lg:px-12 px-16 text-sm font-semibold text-center">
                 {venue.title}
               </h2>
               <p className="text-xs text-center px-10">{venue.loci}</p>

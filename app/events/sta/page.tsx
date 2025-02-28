@@ -16,6 +16,8 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["IEEE Fees: Rs.150/-", "Non-IEEE Fees: Rs.300/-"],
+    brshLink: "PitchItUp",
   },
   {
     title: "TechXplore",
@@ -30,6 +32,12 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: [
+      "Individual Fees: Rs.100/-",
+      " 2 in a Group: Rs.150/-",
+      " 4 in a Group: Rs.300/-",
+    ],
+    brshLink: "TechExplore",
   },
 ];
 

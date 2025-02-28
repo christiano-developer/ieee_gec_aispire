@@ -32,6 +32,7 @@ const events = [
       " Robo Derby",
       "Hardware Hustle",
     ],
+    pool: "Prize pool:Rs.75,000/-",
   },
   {
     title: "cyber arena",
@@ -40,6 +41,7 @@ const events = [
     img: "/eventO/cyber_2_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: ["Call Of Duty", "FIFA", "Capture The Flag", "Blind Coding"],
+    pool: "Prize pool:Rs.31,000/-",
   },
   {
     title: "success arena",
@@ -56,6 +58,7 @@ const events = [
     img: "/eventO/startup_arena_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: ["Pitch It Up", "TechXplore"],
+    pool: "Prize pool:Rs.50,000/-",
   },
 ];
 
@@ -201,7 +204,7 @@ export default function Home() {
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
-          <div className="absolute inset-0 bottom-12  bg-[url('/event_home_bg.png')] lg:bg-cover object-contain bg-no-repeat bg-center opacity-30"></div>
+          <div className="absolute inset-0 bottom-12  bg-[url('/event_home_bg.png')]  lg:bg-cover object-contain bg-no-repeat bg-center opacity-30"></div>
 
           <EventList events={events} />
         </motion.div>
@@ -249,7 +252,7 @@ export default function Home() {
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
-          <Venue className="my-5 px-1 lg:p-10 z-10 lg:scale-100 scale-95" />
+          <Venue className="my-5 px-1 lg:p-10  z-10 lg:scale-100 scale-95" />
         </motion.div>
       </div>
       <motion.div
@@ -260,7 +263,7 @@ export default function Home() {
         variants={scrollAnimation}
         className="relative mb-10 flex flex-col items-center justify-center lg:px-0  lg:scale-100 "
       >
-        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.8] opacity-70   top-10 lg:scale-[1.25]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
+        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.5] opacity-70  top-6 lg:scale-[1.25]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
         <ContactCard className="relative shadow-md shadow-black lg:scale-100 scale-95" />
       </motion.div>
     </div>

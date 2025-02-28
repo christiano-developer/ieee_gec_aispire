@@ -16,6 +16,7 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["Registration Fees: Rs 500/-"],
   },
   {
     title: "FIFA",
@@ -29,6 +30,7 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 160,
+    fee: ["Registration Fees: Rs 200/-"],
   },
   {
     title: "Blind Coding",
@@ -43,11 +45,13 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["IEEE Fees: Rs.100/-", "Non-IEEE Fees: Rs.250/-"],
+    brshLink: "BlindCoding",
   },
   {
     title: "Capture the Flag",
     subTitle: "",
-    imgdet: ["capture_the_flag_1", "capture_the_flag_1"],
+    imgdet: ["capture_the_flag_1", "capture_the_flag_2"],
     description:
       "Team up in pairs for an action-packed challenge! Solve beginner to intermediate tasks blending cybersecurity and robotics, earn points, and hunt for flags. Are you ready to rise to the top?",
     linkLabel: "Event Details",
@@ -57,6 +61,8 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
+    fee: ["IEEE Fees: Rs.250/-", "Non-IEEE Fees: Rs.500/-"],
+    brshLink: "CaptureTheFlag",
   },
 ];
 
