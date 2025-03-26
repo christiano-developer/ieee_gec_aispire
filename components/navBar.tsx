@@ -5,6 +5,25 @@ import Link from "next/link";
 import { useState } from "react";
 import SidePanel from "./sidebar";
 
+import styled, { keyframes } from "styled-components";
+
+const wiggle = keyframes`
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  85% { transform: rotate(5deg); }
+  95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+`;
+
+// Create a styled h1 component that uses the wiggle animation
+const WiggleText = styled.h1`
+  display: inline-block;
+  animation: ${wiggle} 2.5s infinite;
+  &:hover {
+    animation: none;
+  }
+`;
+
 interface NavbarProps {
   className?: string;
   navLinks: navLink[];
@@ -23,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, navLinks }) => {
 
   return (
     <nav
-      className={`flex justify-center shadow-md shadow-black lg:px-5 lg:py-1 px-1 py-1 items-center ${className}`}
+      className={`flex font-mono justify-center shadow-md shadow-black lg:px-5 lg:py-1 px-1 py-1 items-center ${className}`}
     >
       {navLinks.map((navLink, index) => (
         <div

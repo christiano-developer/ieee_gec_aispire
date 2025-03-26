@@ -217,7 +217,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <>
       <div
-        className={`flex flex-col h-[34rem] justify-center lg:w-80 border-2 border-secondary lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#315354] lg:my-5 lg:p-4 p-2 lg:py-4 bg-white shadow-inner shadow-black`}
+        className={`flex flex-col h-[34rem] justify-center lg:w-80 border-2 border-secondary lg:scale-100 rounded-lg bg-gradient-to-b from-[#092635] to-[#315354] lg:my-5 lg:p-4 p-2 lg:py-4  shadow-inner shadow-black`}
       >
         <h1
           className={`lg:text-xl  font-bold text-center whitespace-nowrap  ${pixel.className}`}

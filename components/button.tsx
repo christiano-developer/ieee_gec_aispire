@@ -36,13 +36,13 @@ const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose }) => {
       <div className="bg-white rounded shadow-lg w-[90%] md:max-w-4xl relative overflow-hidden">
         <Button
           onPress={onClose}
-          className="absolute right-2 text-secondary hover:text-gray-800 text-5xl"
+          className="absolute right-2 text-secondary hover:text-white text-5xl"
         >
           &times;
         </Button>
         <Button
           onPress={handleDownload}
-          className="absolute top-[10px] right-14 text-secondary hover:text-gray-800 text-2xl"
+          className="absolute top-[0px] right-14 text-secondary hover:text-gray-800 text-2xl"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

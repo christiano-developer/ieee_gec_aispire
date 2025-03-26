@@ -203,9 +203,8 @@ export default function Home() {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
+          className="relative mb-10 lg:mb-0 flex flex-col items-center justify-center lg:px-0  lg:scale-100 "
         >
-          <div className="absolute inset-0 bottom-12  bg-[url('/event_home_bg.png')]  lg:bg-cover object-contain bg-no-repeat bg-center opacity-30"></div>
-
           <EventList events={events} />
         </motion.div>
         <motion.div
@@ -217,7 +216,7 @@ export default function Home() {
         >
           <Link
             href="/events/ra"
-            className="flex mt-4 items-center justify-center pb-10 space-x-2 text-center my-2  text-lg drop-shadow-xl text-white font-mono underline underline-offset-2"
+            className="flex items-center justify-center pb-10 space-x-2 text-center my-2  text-lg drop-shadow-xl text-white font-mono underline underline-offset-2"
           >
             <h2>View All Events</h2>
             <FiArrowRight size={25} strokeWidth={2} />
@@ -252,7 +251,7 @@ export default function Home() {
           transition={{ duration: 1.0 }}
           variants={scrollAnimation}
         >
-          <Venue className="my-5 px-1 lg:p-10  z-10 lg:scale-100 scale-95" />
+          <Venue className="my-5 mb-0 px-1 lg:p-10  z-10 lg:scale-100 scale-95" />
         </motion.div>
       </div>
       <motion.div

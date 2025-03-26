@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import Link from "next/link";
+import { FiExternalLink } from "react-icons/fi";
 
 const hacked = localFont({
   src: "../public/fonts/subset-HACKED.woff2",
@@ -39,10 +40,16 @@ const ContactCard: React.FC<cardProps> = ({ className }) => {
           Have questions or need assistance? Were here to help!
         </p>
         {contacts.map((contact, index) => (
-          <Link key={index} href={contact.link} target="_blank">
-            <p className="lg:my-2 lg:py-2  my-1 text-xs lg:text-[18pt] underline underline-offset-4">
+          <Link
+            key={index}
+            href={contact.link}
+            target="_blank"
+            className="flex items-center"
+          >
+            <p className="lg:my-2 lg:py-2    my-1 text-xs lg:text-[18pt] underline underline-offset-4">
               {contact.cont}
             </p>
+            <FiExternalLink className="mx-1" />
           </Link>
         ))}
         <p className="lg:my-4 lg:mt-10 my-2 lg:text-[19pt] text-sm">

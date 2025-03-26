@@ -48,7 +48,7 @@ export default function SciFiContainer({
         {eventCategories.map((category, index) => (
           <Link key={category.id} href={`/events/${category.id}`}>
             <span
-              className={`hover:text-white cursor-pointer font-mono p-2 lg:p-3 text-center text-secondary  border-l-[4px] border-r-[4px] border-secondary lg:bg-transparent  transition-all duration-500 inline-block ${
+              className={`hover:text-white cursor-pointer font-mono p-2 lg:p-3 text-center text-secondary  border-l-[4px] border-r-[4px]  border-secondary lg:bg-transparent  transition-all duration-500 inline-block ${
                 index === currentIndex
                   ? "border-opacity-100"
                   : "border-opacity-0"

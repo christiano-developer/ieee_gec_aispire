@@ -30,6 +30,10 @@ const navLinks = [
     nLink: "/schedule",
   },
   {
+    nLabel: "Accomodation",
+    nLink: "/accomodation",
+  },
+  {
     nLabel: "Contact Us",
     nLink: "/contact",
   },

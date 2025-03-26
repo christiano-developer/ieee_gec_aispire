@@ -61,7 +61,7 @@ const eventsData = [
     imgAlt: "Line Follower Robot Event",
     imgW: 0,
     imgH: 0,
-    fee: ["IEEE Fees: Rs.250/-", "Non-IEEE Fees: Rs.500/-"],
+    fee: ["IEEE Fees: Rs.100/-", "Non-IEEE Fees: Rs.250/-"],
     brshLink: "CaptureTheFlag",
   },
 ];

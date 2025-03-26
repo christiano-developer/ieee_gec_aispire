@@ -123,7 +123,10 @@ const Footer: React.FC<NavbarProps> = ({ className }) => {
                   </defs>
                 </svg>
               </Link>
-              <Link href="https://www.linkedin.com/company/ieeegec/">
+              <Link
+                href="https://www.linkedin.com/company/ieeegec/"
+                target="_blank"
+              >
                 <svg
                   className="w-8 h-8 lg:w-10 lg:h-10 hover:scale-110 transition"
                   viewBox="0 0 48 48"
