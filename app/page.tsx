@@ -40,7 +40,7 @@ const events = [
     buttonLink: "/events/ca",
     img: "/eventO/cyber_2_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
-    description: ["Call Of Duty", "FIFA", "Capture The Flag", "Blind Coding"],
+    description: ["FIFA", "Capture The Flag", "Blind Coding"],
     pool: "Prize pool:Rs.31,000/-",
   },
   {

@@ -7,18 +7,36 @@ import SidePanel from "./sidebar";
 
 import styled, { keyframes } from "styled-components";
 
-const wiggle = keyframes`
-  0% { transform: rotate(0deg); }
-  80% { transform: rotate(0deg); }
-  85% { transform: rotate(5deg); }
-  95% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+const pulse = keyframes`
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 `;
 
-// Create a styled h1 component that uses the wiggle animation
-const WiggleText = styled.h1`
+// Glitter animation: applies a shimmering text-shadow effect
+const glitter = keyframes`
+  0% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  25% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+  }
+  75% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+`;
+
+const PulseGlitterText = styled.h1`
   display: inline-block;
-  animation: ${wiggle} 2.5s infinite;
+  animation:
+    ${pulse} 3s infinite,
+    ${glitter} 3s infinite;
   &:hover {
     animation: none;
   }
@@ -57,7 +75,11 @@ const Navbar: React.FC<NavbarProps> = ({ className, navLinks }) => {
               navLink.classDis ? "pointer-events-none" : ""
             }`}
           >
-            {navLink.nLabel}
+            {navLink.nLabel === "Women Summit" ? (
+              <PulseGlitterText>{navLink.nLabel}</PulseGlitterText>
+            ) : (
+              navLink.nLabel
+            )}
           </Link>
           {/* Image on hover */}
           {hoveredIndex === index && navLink.hoverImg && (

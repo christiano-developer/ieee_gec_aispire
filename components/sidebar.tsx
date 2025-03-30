@@ -1,6 +1,42 @@
 // components/SidePanel.tsx
 import Link from "next/link";
 import { useState } from "react";
+import styled, { keyframes } from "styled-components";
+
+const pulse = keyframes`
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+`;
+
+// Glitter animation: applies a shimmering text-shadow effect
+const glitter = keyframes`
+  0% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  25% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+  }
+  75% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+`;
+
+const PulseGlitterText = styled.h1`
+  display: inline-block;
+  animation:
+    ${pulse} 3s infinite,
+    ${glitter} 3s infinite;
+  &:hover {
+    animation: none;
+  }
+`;
 
 interface SideProps {
   className?: string;
@@ -22,7 +58,9 @@ const SidePanel: React.FC<SideProps> = ({ links = [], className }) => {
   const defaultLinks = [
     { href: "/", label: "Home" },
     { href: "/events/ra", label: "Events" },
+    { href: "/ws", label: "Women Summit" },
     { href: "/schedule", label: "Schedule" },
+    { href: "/accommodation", label: "Accommodation" },
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -55,7 +93,11 @@ const SidePanel: React.FC<SideProps> = ({ links = [], className }) => {
               className="block w-30 p-4 text-center text-white hover:bg-secondary hover:text-primary transition-all duration-500 hover:scale-110"
               onClick={closeSidePanel} // This will close the sidebar on link click
             >
-              {link.label}
+              {link.label === "Accommodation" ? (
+                <PulseGlitterText>{link.label}</PulseGlitterText>
+              ) : (
+                link.label
+              )}
             </Link>
           ))}
         </div>

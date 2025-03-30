@@ -72,10 +72,10 @@ const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose }) => {
 interface buttonGProps {
   className?: string;
   label: string;
-
+  blank?: string;
   link?: string;
 }
-const ButtonG: React.FC<buttonGProps> = ({ className, label, link }) => {
+const ButtonG: React.FC<buttonGProps> = ({ className, label, link, blank }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -84,6 +84,7 @@ const ButtonG: React.FC<buttonGProps> = ({ className, label, link }) => {
         onPress={() => setShowOverlay(true)}
         as="a"
         href={link}
+        target={blank}
         className={` active:scale-90 hover:scale-110 bg-gradient-to-b from-[#9EC8B9] to-[#092635] font-hacked  lg:px-6 px-2 lg:py-2 py-1 border border-[#9EC8B9] rounded-xl hover:bg-white transition-all duration-500 ${className}`}
       >
         {label}

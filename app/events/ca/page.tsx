@@ -4,21 +4,6 @@ import EventsList from "../_components/eventsList";
 
 const eventsData = [
   {
-    title: "Call of Duty",
-    imgdet: ["", ""],
-    subTitle: "",
-    description:
-      "Lock and load for an adrenaline-fueled battle! Call of Duty delivers intense, fast-paced action, pushing your strategy and reflexes to the limit across thrilling game modes. Are you ready to dominate the battlefield?",
-
-    buttonlink: "https://forms.gle/DbbiCar1PKEeVnx66",
-    eventdet: "",
-    img: "cod",
-    imgAlt: "Line Follower Robot Event",
-    imgW: 0,
-    imgH: 0,
-    fee: ["Registration Fees: Rs 500/-"],
-  },
-  {
     title: "FIFA",
     subTitle: "",
     imgdet: ["", ""],

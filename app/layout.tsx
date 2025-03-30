@@ -20,18 +20,25 @@ const navLinks = [
     nLink: "/events/ra",
   },
   {
-    nLabel: "Speakers",
-    nLink: "/",
-    classDis: true,
-    hoverImg: "/speakers_coming_soon.png",
+    nLabel: "Women Summit",
+
+    nLink: "/ws",
   },
+
+  /*{
+    nLabel: "Speakers",
+    classDis: true,
+    nLink: "/",
+
+    hoverImg: "/speakers_coming_soon.png",
+  },*/
   {
     nLabel: "Schedule",
     nLink: "/schedule",
   },
   {
-    nLabel: "Accomodation",
-    nLink: "/accomodation",
+    nLabel: "Accommodation",
+    nLink: "/accommodation",
   },
   {
     nLabel: "Contact Us",
