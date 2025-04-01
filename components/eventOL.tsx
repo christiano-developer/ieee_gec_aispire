@@ -144,7 +144,7 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
 
   return (
     <div className="lg:flex grid grid-cols-2 gap-4 lg:scale-100 justify-center items-center lg:gap-4 lg:h-fit lg:py-10">
-      <div className="absolute -inset-10 bg-[url('/event_home_bg.png')] lg:bg-cover bg-no-repeat bg-center opacity-30"></div>
+      <div className="absolute -inset-10 bg-[url('/event_home_bg.png')] lg:bg-cover bg-no-repeat bg-center scale-90 opacity-30"></div>
       {events.map((event, index) => (
         <EventCard
           key={index}

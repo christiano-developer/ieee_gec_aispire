@@ -30,7 +30,7 @@ const speakers = [
   {
     title: "Kalyani N",
     subTitle:
-      "Scientist/Engr- SG HEAD, Instrumentation & Test Systems SectionControls System Group URSC , ISRO , Bengaluru ",
+      "Scientist/Engr- SG HEAD, Instrumentation & Test Systems Section, Controls System Group URSC , ISRO , Bengaluru ",
     description:
       "A veteran in satellite systems and instrumentation, Kalyani N has been a key contributor to ISRO for over three decades. With a B.Tech in Electronics & Communication Engineering from Government College of Engineering, Trivandrum, she has led design, development, and testing of critical systems for multiple space missions.",
     highlights: [
@@ -45,7 +45,7 @@ const speakers = [
   {
     title: "Anuradha B. Desai",
     subTitle:
-      "Scientist/ Engr SGDIVISION HEAD  TELEMETRY AND DATA ACQUISITION SYSTEMURSCISRO, Bengaluru",
+      "Scientist/Engr - SG, Division Head - Telemetry & Data Acquisition System, URSC, ISRO, Bengluru",
     description:
       "With 25 years at ISRO, Anuradha B. Desai has been instrumental in satellite telemetry, VLSI design, and mission-critical systems. From leading telemetry systems for HYLAS, IRNSS, GSAT, and Gaganyaan to supporting major missions like Mars Orbiter, Chandrayaan-2 & 3, she has played a key role in advancing India’s space communication.",
     highlights: [

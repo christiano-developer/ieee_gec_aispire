@@ -8,27 +8,27 @@ import SidePanel from "./sidebar";
 import styled, { keyframes } from "styled-components";
 
 const pulse = keyframes`
-  0% { transform: scale(1); }
+  0% { transform: scale(1.05); }
   50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  100% { transform: scale(1.04); }
 `;
 
 // Glitter animation: applies a shimmering text-shadow effect
 const glitter = keyframes`
   0% {
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    text-shadow: 0 0 0 rgba(0, 255, 255, 0);
   }
   25% {
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4), 0 0 8px rgba(0, 255, 255, 0.4);
   }
   50% {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 8px rgba(0, 255, 255, .8), 0 0 12px rgba(255, 255, 255, .8);
   }
   75% {
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4), 0 0 8px rgba(0, 255, 255, 04);
   }
   100% {
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    text-shadow: 0 0 0 rgba(0, 255, 255, 0);
   }
 `;
 
@@ -75,7 +75,8 @@ const Navbar: React.FC<NavbarProps> = ({ className, navLinks }) => {
               navLink.classDis ? "pointer-events-none" : ""
             }`}
           >
-            {navLink.nLabel === "Women Summit" ? (
+            {navLink.nLabel === "Women Summit" ||
+            navLink.nLabel === "Speakers" ? (
               <PulseGlitterText>{navLink.nLabel}</PulseGlitterText>
             ) : (
               navLink.nLabel

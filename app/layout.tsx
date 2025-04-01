@@ -24,6 +24,11 @@ const navLinks = [
 
     nLink: "/ws",
   },
+  {
+    nLabel: "Speakers",
+
+    nLink: "/es",
+  },
 
   /*{
     nLabel: "Speakers",

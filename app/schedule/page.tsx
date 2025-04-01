@@ -13,7 +13,7 @@ export default function Events() {
         width={1440}
         height={500}
         alt="shc"
-        className="lg:hidden mt-28 pt-10 object-contain"
+        className="lg:hidden mt-8 pt-5 object-contain"
       />
 
       {/*breaker */}

@@ -1,4 +1,5 @@
 // components/SidePanel.tsx
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
@@ -59,13 +60,30 @@ const SidePanel: React.FC<SideProps> = ({ links = [], className }) => {
     { href: "/", label: "Home" },
     { href: "/events/ra", label: "Events" },
     { href: "/ws", label: "Women Summit" },
+    { href: "/es", label: "Speakers" },
     { href: "/schedule", label: "Schedule" },
     { href: "/accommodation", label: "Accommodation" },
     { href: "/contact", label: "Contact Us" },
   ];
 
   return (
-    <div className={`${className}`}>
+    <div className={`${className} flex flex-row justify-between items-center `}>
+      <div className="flex flex-row gap-4 items-center absolute left-0 px-5">
+        <Image
+          src="/GEC_logo_nobg.png"
+          alt="a"
+          width={40}
+          height={50}
+          className="z-10"
+        />
+        <Image
+          src="/AiSPIRE_logo_white.png"
+          alt="a"
+          width={130}
+          height={50}
+          className="z-10"
+        />
+      </div>
       {/* Hamburger Icon */}
       <button
         onClick={toggleSidePanel}
@@ -93,7 +111,7 @@ const SidePanel: React.FC<SideProps> = ({ links = [], className }) => {
               className="block w-30 p-4 text-center text-white hover:bg-secondary hover:text-primary transition-all duration-500 hover:scale-110"
               onClick={closeSidePanel} // This will close the sidebar on link click
             >
-              {link.label === "Accommodation" ? (
+              {link.label == "Speakers" || link.label == "Women Summit" ? (
                 <PulseGlitterText>{link.label}</PulseGlitterText>
               ) : (
                 link.label
