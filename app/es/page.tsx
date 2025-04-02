@@ -26,9 +26,19 @@ const pixel = localFont({
   ],
 });
 
+const hacked = localFont({
+  src: [
+    { path: "../../public/fonts/subset-HACKED.woff2" },
+    { path: "../../public/fonts/subset-HACKED.woff" },
+    { path: "../../public/fonts/subset-HACKED.ttf" },
+  ],
+});
+
 const speakers = [
   {
     title: "Gyan Prakash",
+    topic: "Ai IN PRODUCT MANAGEMENT: TRENDS & INSIGHTS",
+    dTime: "Friday 4th April 2025, Time: 3:00pm to 3:30pm",
     subTitle: "Senior Product Manager, Regie.ai",
     description:
       "Gyan Prakash is a seasoned Product Manager with 7+ years of experience in launching and scaling B2C and B2B SaaS products. Currently a Senior Product Manager at Regie.AI, he has previously led impactful initiatives at Astuto.ai, Trica Equity, and Letsventure.",
@@ -42,6 +52,10 @@ const speakers = [
   },
   {
     title: "Aakash Rodrigues",
+    dTime: "Friday 4th April 2025, Time: 3:30pm to 4:30pm",
+    topic:
+      "Ai-DRIVEN DESIGN EVOLUTION: FROM UI/UX TO STRATEGIC PRODUCT LEADERSHIP",
+
     subTitle: "Founder & Creative Director, Chariot",
     description:
       "Aakash Rodrigues is a seasoned entrepreneur and design strategist with 10+ years of experience in product design, UI/UX, and innovation consulting. He has spearheaded high-impact design projects for leading brands such as Digit Insurance, BookMyShow, The Ken, Value Research, and Bloom Hotels as the Head of Web & UI/UX at Opposite (previously Beard Design).",
@@ -61,7 +75,7 @@ const TitleSvg = (
     viewBox="0 0 878 47"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="lg:scale-125 scale-[.7] pt-5 -mb-5"
+    className="lg:w-auto pt-5 -mb-5 w-72"
   >
     <g filter="url(#filter0_d_1147_1246)">
       <path
@@ -153,54 +167,60 @@ export default function Speakers() {
         </motion.div>
 
         {/* Scroll Snap Container */}
-        <div className=" snap-center scroll-smooth  h-[545px] overflow-y-scroll relative z-10 w-full mx-10 bg-gradient-to-b from-[#1B4242]/90 to-[#5F8880]/90 rounded-lg  mb-10">
+        <div className=" snap-center scroll-smooth flex flex-col items-center justify-center  h-[545px] overflow-y-scroll relative z-10 w-full mx-10 bg-gradient-to-b from-[#1B4242]/90 to-[#5F8880]/90 rounded-lg  mb-10">
           {speakers.map((speaker, index) => (
-            <motion.div
-              key={index}
-              className="snap-start mt-10 mx-10 flex flex-row justify-center items-center text-center rounded-xl bg-gradient-to-b from-[#092635]/90 to-[#2b4c4e]/90 my-10 shadow-2xl px-10 py-10 gap-x-10"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6 }}
-              variants={scrollAnimation}
-            >
-              <Image
-                src={`/ws/${speaker.img}.png`}
-                width={400}
-                height={400}
-                alt="speaker"
-                className="flex-shrink-0 rounded-full size-fit"
-              />
-              <div className="flex flex-col justify-center px-2 gap-y-4">
-                <h2 className="text-white text-2xl italic font-serif">
-                  {speaker.title}
-                </h2>
-                <p className="text-white text-sm font-semibold -mt-3  ">
-                  {speaker.subTitle}
-                </p>
-                <p className="text-white text-left font-extralight">
-                  {speaker.description}
-                </p>
-                <h3 className="underline text-left">HIGHLIGHTS</h3>
-                <ul className="list-disc pl-10">
-                  {speaker.highlights.map((high, idx) => {
-                    const [boldText, regularText] = high.split("–");
-                    return (
-                      <li key={idx} className="text-sm text-left">
-                        <strong>{boldText.trim()} –</strong>{" "}
-                        {regularText.trim()}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </motion.div>
+            <>
+              <h1 className={`${hacked.className} text-4xl pt-10  `}>
+                {speaker.topic}
+              </h1>
+              <h1 className={`font-light text-lg italic`}>{speaker.dTime}</h1>
+              <motion.div
+                key={index}
+                className="snap-start mx-10 flex flex-row justify-center items-center text-center rounded-xl bg-gradient-to-b from-[#092635]/90 to-[#2b4c4e]/90 my-10 shadow-2xl px-10 py-10 gap-x-10"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.6 }}
+                variants={scrollAnimation}
+              >
+                <Image
+                  src={`/ws/${speaker.img}.png`}
+                  width={400}
+                  height={400}
+                  alt="speaker"
+                  className="flex-shrink-0 rounded-full size-fit"
+                />
+                <div className="flex text-white flex-col justify-center px-2 gap-y-4">
+                  <h2 className="text-white text-2xl italic font-serif">
+                    {speaker.title}
+                  </h2>
+                  <p className="text-white text-sm font-semibold -mt-3  ">
+                    {speaker.subTitle}
+                  </p>
+                  <p className="text-white text-left font-extralight">
+                    {speaker.description}
+                  </p>
+                  <h3 className="underline text-left">HIGHLIGHTS</h3>
+                  <ul className="list-disc pl-10">
+                    {speaker.highlights.map((high, idx) => {
+                      const [boldText, regularText] = high.split("–");
+                      return (
+                        <li key={idx} className="text-sm text-left">
+                          <strong>{boldText.trim()} –</strong>{" "}
+                          {regularText.trim()}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </motion.div>
+            </>
           ))}
         </div>
       </div>
 
       {/* Mobile View with Swipeable Slider */}
-      <div className="lg:hidden flex flex-col justify-center items-center w-screen mt-16 relative">
+      <div className="lg:hidden text-white flex flex-col justify-center items-center lg:w-screen mt-16 relative">
         {TitleSvg}
         <div {...swipeHandlers} className="w-full overflow-hidden px-5">
           <div
@@ -209,7 +229,7 @@ export default function Speakers() {
           >
             {speakers.map((speaker, index) => (
               <div key={index} className="w-full flex-shrink-0 px-4">
-                <div className="bg-gradient-to-b from-[#1B4242]/80 to-[#5F8880]/80 my-10 shadow-2xl px-5 py-5 rounded-xl text-center h-[650px] flex flex-col justify-around">
+                <div className="bg-gradient-to-b from-[#1B4242]/80 to-[#5F8880]/80 my-10 shadow-2xl px-5 py-5 rounded-xl text-center h-[710px] flex flex-col justify-around">
                   <Image
                     src={`/ws/${speaker.img}.png`}
                     width={200}
@@ -217,6 +237,9 @@ export default function Speakers() {
                     alt="speaker"
                     className="rounded-full mx-auto"
                   />
+                  <h1 className={`${hacked.className} text-2xl`}>
+                    {speaker.topic}
+                  </h1>
                   <h2
                     className={`text-white text-xl italic mt-4 ${playfair.variable}`}
                   >
