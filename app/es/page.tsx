@@ -237,8 +237,11 @@ export default function Speakers() {
                     alt="speaker"
                     className="rounded-full mx-auto"
                   />
-                  <h1 className={`${hacked.className} text-2xl`}>
+                  <h1 className={`${hacked.className} text-xl`}>
                     {speaker.topic}
+                  </h1>
+                  <h1 className={`font-light text-lg italic pt-2`}>
+                    {speaker.dTime}
                   </h1>
                   <h2
                     className={`text-white text-xl italic mt-4 ${playfair.variable}`}
