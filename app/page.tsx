@@ -3,6 +3,7 @@ import AboutCard from "@/components/aboutCard";
 import { motion } from "framer-motion";
 import ButtonG from "@/components/button";
 import Countdown from "@/components/countdown";
+import { useState } from "react";
 
 import ContactCard from "@/components/contact";
 import Image from "next/image";
@@ -12,7 +13,7 @@ import EventList from "@/components/eventOL";
 import { FiArrowRight } from "react-icons/fi";
 import Venue from "@/components/venue";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const scrollAnimation = {
   hidden: { opacity: 0, y: 50 },
@@ -40,7 +41,7 @@ const events = [
     buttonLink: "/events/ca",
     img: "/eventO/cyber_2_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
-    description: ["FIFA", "Capture The Flag", "Blind Coding"],
+    description: ["FIFA", "Blind Coding"],
     pool: "Prize pool:Rs.31,000/-",
   },
   {
@@ -131,8 +132,31 @@ export default function Home() {
               alt="eventdate"
               className="z-50 p-4 lg:scale-100 scale-75 max-w-full"
             />
-            <div className="lg:hidden flex">
-              <Countdown className="-my-10 scale-[0.6]  lg:scale-[80%]" />
+            <div className="lg:hidden flex flex-col items-center justify-center">
+              <motion.div
+                className="font-hacked text-5xl text-center"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
+              >
+                DAY 1 LIVE
+                <motion.div
+                  className="font-mono text-lg text-white"
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
+                  }}
+                >
+                  Rajiv Gandhi Kala Mandir & GEC
+                </motion.div>
+              </motion.div>
             </div>
 
             <div className="mt-5 grid grid-cols-1 gap-4 justify-items-center lg:flex lg:justify-center lg:space-x-10 lg:text-2xl text-xl">
@@ -155,8 +179,35 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <Countdown className="hidden lg:flex lg:mt-32 -mt-5 scale-[0.6]  lg:scale-[80%]" />
+          <div className="flex-col items-center justify-center">
+            <Countdown className="hidden lg:hidden  lg:mt-32 -mt-5 scale-[0.6]  lg:scale-[80%]" />
+            <div className=" hidden lg:flex flex-col items-center ">
+              <motion.h1
+                className=" font-hacked text-[70pt] "
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
+              >
+                DAY 1 LIVE
+              </motion.h1>
+
+              <motion.div
+                className="font-mono text-xl text-white transition-opacity duration-300"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
+              >
+                Rajiv Gandhi Kala Mandir & GEC
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

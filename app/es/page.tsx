@@ -8,7 +8,7 @@ import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
 
 const scrollAnimation = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -167,10 +167,10 @@ export default function Speakers() {
         </motion.div>
 
         {/* Scroll Snap Container */}
-        <div className=" snap-center scroll-smooth flex flex-col items-center justify-center  h-[545px] overflow-y-scroll relative z-10 w-full mx-10 bg-gradient-to-b from-[#1B4242]/90 to-[#5F8880]/90 rounded-lg  mb-10">
+        <div className="snap-proximity scroll-smooth flex flex-col items-center justify-center  h-[545px] overflow-y-scroll relative z-10 w-full mx-10 bg-gradient-to-b from-[#1B4242]/90 to-[#5F8880]/90 rounded-lg  mb-10 pt-[600px]">
           {speakers.map((speaker, index) => (
-            <>
-              <h1 className={`${hacked.className} text-4xl pt-10  `}>
+            <div key={index} className="flex flex-col items-center">
+              <h1 className={`${hacked.className} text-4xl pt-10`}>
                 {speaker.topic}
               </h1>
               <h1 className={`font-light text-lg italic`}>{speaker.dTime}</h1>
@@ -214,7 +214,7 @@ export default function Speakers() {
                   </ul>
                 </div>
               </motion.div>
-            </>
+            </div>
           ))}
         </div>
       </div>
