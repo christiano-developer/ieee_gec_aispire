@@ -143,9 +143,9 @@ export default function Home() {
                   damping: 20,
                 }}
               >
-                DAY 1 LIVE
+                DAY 2 LIVE
                 <motion.div
-                  className="font-mono text-lg text-white"
+                  className="font-mono text-xl text-white"
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{
@@ -154,7 +154,7 @@ export default function Home() {
                     damping: 20,
                   }}
                 >
-                  Rajiv Gandhi Kala Mandir & GEC
+                  GEC
                 </motion.div>
               </motion.div>
             </div>
@@ -192,11 +192,11 @@ export default function Home() {
                   damping: 20,
                 }}
               >
-                DAY 1 LIVE
+                DAY 2 LIVE
               </motion.h1>
 
               <motion.div
-                className="font-mono text-xl text-white transition-opacity duration-300"
+                className="font-mono text-3xl text-white transition-opacity duration-300"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
@@ -205,7 +205,7 @@ export default function Home() {
                   damping: 20,
                 }}
               >
-                Rajiv Gandhi Kala Mandir & GEC
+                GEC
               </motion.div>
             </div>
           </div>
