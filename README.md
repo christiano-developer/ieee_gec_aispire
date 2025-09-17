@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) \
+This is a [Next.js](https://nextjs.org) \ project
 [Next.js Documentation](https://nextjs.org/docs)
 Install Dependencies: Run the following command to install the required Node.js packages:
 ```bash
