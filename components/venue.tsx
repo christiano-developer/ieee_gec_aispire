@@ -19,8 +19,8 @@ const Img = [
     title: "Rajiv Gandhi Kala Mandir",
     buttonLink: "https://maps.app.goo.gl/6cKPSniU1TGjZeBUA",
     img: [
-      "/venue/rajiv-gandhi-kala-mandir-ponda-goa-auditoriums.avif",
-      "/venue/rajiv_gandhi_kala_mandir_map.png",
+      "venue/rajiv-gandhi-kala-mandir-ponda-goa-auditoriums.avif",
+      "venue/rajiv_gandhi_kala_mandir_map.png",
     ],
     loci: "92X7+XJ8, Ponda – Curti Rd, Durgabhat, Betora, Ponda, Goa 403401",
   },

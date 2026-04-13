@@ -25,8 +25,8 @@ const Img = [
     title: "Hotel Yashoda Deluxe",
     buttonLink: "https://maps.app.goo.gl/Qvq4EAJi4Fkwapqf8",
     img: [
-      "/venue/hotel_yashoda_deluxe.png",
-      "/venue/hotel_yashoda_deluxe_map.png",
+      "venue/hotel_yashoda_deluxe.png",
+      "venue/hotel_yashoda_deluxe_map.png",
     ],
     price: ["₹325 per person (Non-AC)", "₹400 per person (AC)"],
   },
@@ -34,10 +34,7 @@ const Img = [
     title: "Farmagudi Residency",
 
     buttonLink: "https://maps.app.goo.gl/aQdy64M2TiTvigHk6",
-    img: [
-      "/venue/farmagudi_residency.png",
-      "/venue/farmagudi_residency_map.png",
-    ],
+    img: ["venue/farmagudi_residency.png", "venue/farmagudi_residency_map.png"],
     price: ["₹1700 for 3 people (Non-AC)", " ₹2000 for 3 people (AC)"],
   },
 ];

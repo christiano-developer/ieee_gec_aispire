@@ -25,7 +25,7 @@ const events = [
     title: "Robo arena",
     linkLabel: "appapap",
     buttonLink: "/events/ra",
-    img: "/eventO/robo_arena_wo_bg.png",
+    img: "eventO/robo_arena_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: [
       "The Labyrinth",
@@ -39,7 +39,7 @@ const events = [
     title: "cyber arena",
     linkLabel: "appapap",
     buttonLink: "/events/ca",
-    img: "/eventO/cyber_2_wo_bg.png",
+    img: "eventO/cyber_2_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: ["FIFA", "Blind Coding"],
     pool: "Prize pool:Rs.31,000/-",
@@ -48,7 +48,7 @@ const events = [
     title: "success arena",
     linkLabel: "appapap",
     buttonLink: "/events/sa",
-    img: "/eventO/success_arena_wo_bg.png",
+    img: "eventO/success_arena_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: ["Placement Bootcamp ", "Woman Summit ", "Expert Talks"],
   },
@@ -56,7 +56,7 @@ const events = [
     title: "Startup arena",
     linkLabel: "appapap",
     buttonLink: "/events/sta",
-    img: "/eventO/startup_arena_wo_bg.png",
+    img: "eventO/startup_arena_wo_bg.png",
     imgAlt: "Line Follower Robot Event",
     description: ["Pitch It Up", "TechXplore"],
     pool: "Prize pool:Rs.50,000/-",
@@ -106,7 +106,7 @@ export default function Home() {
     <div className="bg-primary min-h-screen text-white lg:px-16 pt-8 lg:pt-0">
       <Image
         alt="Mountains"
-        src={"/bghome.png"}
+        src={"bghome.png"}
         quality={100}
         fill={true}
         className="opacity-10 "
