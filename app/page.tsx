@@ -1,4 +1,5 @@
 "use client";
+import BASE_PATH from "@/lib/constants";
 import AboutCard from "@/components/aboutCard";
 import { motion } from "framer-motion";
 import ButtonG from "@/components/button";
@@ -313,7 +314,10 @@ export default function Home() {
         variants={scrollAnimation}
         className="relative mb-10 flex flex-col items-center justify-center lg:px-0  lg:scale-100 "
       >
-        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.5] opacity-70  top-6 lg:scale-[1.25]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
+        <div
+          className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.5] opacity-70 top-6 lg:scale-[1.25] bg-contain bg-no-repeat bg-center"
+          style={{ backgroundImage: `url('${BASE_PATH}/home_touch.png')` }}
+        ></div>
         <ContactCard className="relative shadow-md shadow-black lg:scale-100 scale-95" />
       </motion.div>
     </div>

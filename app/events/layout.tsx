@@ -11,7 +11,7 @@ export default function EventsLayout({
     <div className="flex flex-col w-screen items-center bg-primary text-white relative py-10">
       <Image
         alt="Mountains"
-        src={"events_bg.png"}
+        src={"/events_bg.png"}
         quality={100}
         fill={true}
         className="opacity-90 "
@@ -19,7 +19,7 @@ export default function EventsLayout({
       />
 
       <Image
-        src="EVENTS_text.png"
+        src="/EVENTS_text.png"
         width={500}
         height={10}
         alt="events"

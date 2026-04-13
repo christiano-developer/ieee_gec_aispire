@@ -1,4 +1,5 @@
 "use client";
+import BASE_PATH from "@/lib/constants";
 import { Nunito } from "next/font/google";
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
@@ -72,7 +73,7 @@ const EventCard: React.FC<EventCardProps> = ({
     trackMouse: true,
   });
   const handleDownload = () => {
-    const fileUrl = `/ERB/${brshLink}.pdf`; // Path to your PDF in the public folder
+    const fileUrl = `${BASE_PATH}/ERB/${brshLink}.pdf`; // Path to your PDF in the public folder
     const fileName = `${brshLink}`;
     // The name for the downloaded file
     console.log(fileUrl);

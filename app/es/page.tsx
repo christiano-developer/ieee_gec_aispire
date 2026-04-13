@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
 
+import BASE_PATH from "@/lib/constants";
+
 const scrollAnimation = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
@@ -151,7 +153,7 @@ export default function Speakers() {
         <div
           className="absolute inset-0 bg-no-repeat opacity-40 mt-14 bg-cover"
           style={{
-            backgroundImage: "url('/ws/bgws.png')",
+            backgroundImage: `url('${BASE_PATH}/ws/bgws.png')`,
           }}
         />
         <motion.div

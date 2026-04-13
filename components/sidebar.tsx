@@ -70,14 +70,14 @@ const SidePanel: React.FC<SideProps> = ({ links = [], className }) => {
     <div className={`${className} flex flex-row justify-between items-center `}>
       <div className="flex flex-row gap-4 items-center absolute left-0 px-5">
         <Image
-          src="GEC_logo_nobg.png"
+          src="/GEC_logo_nobg.png"
           alt="a"
           width={40}
           height={50}
           className="z-10"
         />
         <Image
-          src="AiSPIRE_logo_white.png"
+          src="/AiSPIRE_logo_white.png"
           alt="a"
           width={130}
           height={50}

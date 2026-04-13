@@ -1,3 +1,4 @@
+import BASE_PATH from "@/lib/constants";
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from "react";
 
@@ -16,7 +17,7 @@ const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose }) => {
     };
   }, []);
   const handleDownload = () => {
-    const fileUrl = "/AIspire_Sponsorship_Brochure_2025.pdf"; // Path to your PDF in the public folder
+    const fileUrl = `${BASE_PATH}/AIspire_Sponsorship_Brochure_2025.pdf`; // Path to your PDF in the public folder
     const fileName = "AIspire_Sponsorship_Brochure_2025.pdf";
     console.log(fileUrl); // The name for the downloaded file
 
@@ -59,7 +60,7 @@ const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose }) => {
         </Button>
         <div className="overflow-auto h-[calc(100vh-4rem)]">
           <iframe
-            src="AIspire_Sponsorship_Brochure_2025.pdf"
+            src={`${BASE_PATH}/AIspire_Sponsorship_Brochure_2025.pdf`}
             title="PDF Viewer"
             className="w-full h-screen rounded-b py-10 bg-primary"
           />

@@ -3,6 +3,7 @@
   import useEmblaCarousel from "embla-carousel-react";*/
 }
 import localFont from "next/font/local";
+import BASE_PATH from "@/lib/constants";
 
 const hacked = localFont({
   src: "../public/fonts/subset-HACKED.woff2",
@@ -27,7 +28,8 @@ const AboutCard: React.FC<CardProps> = ({ className, vid }) => {
     >
       <div className="lg:w-1/2  w-full shadow-xl   transition-all duration-500 ">
         <video className="w-full  rounded-xl" playsInline autoPlay muted loop>
-          <source src={vid} type="video/mp4" />
+          {/* Native <source> does not get basePath prepended by Next.js */}
+          <source src={`${BASE_PATH}${vid}`} type="video/mp4" />
         </video>
       </div>
 
