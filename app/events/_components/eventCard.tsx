@@ -152,7 +152,7 @@ const EventCard: React.FC<EventCardProps> = ({
               imgdet.map((imgName, index) => (
                 <div key={index} className="w-full flex-shrink-0">
                   <Image
-                    src={`/brochure/${imgName}.png`}
+                    src={`${BASE_PATH}/brochure/${imgName}.png`}
                     alt={imgAlt || "Event image"}
                     layout="intrinsic"
                     width={1000}
@@ -171,7 +171,7 @@ const EventCard: React.FC<EventCardProps> = ({
               imgdet.map((imgName, index) => (
                 <div key={index} className="w-full flex-shrink-0">
                   <Image
-                    src={`/brochure/${imgName}.png`}
+                    src={`${BASE_PATH}/brochure/${imgName}.png`}
                     alt={imgAlt || "Event image"}
                     layout="intrinsic"
                     width={600}
@@ -227,7 +227,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </h1>
         <div className="self-center rounded m-4 drop-shadow-2xl bg-secondary">
           <Image
-            src={img ? "/event_logos/" + img + ".png" : ""}
+            src={img ? `${BASE_PATH}/event_logos/` + img + ".png" : ""}
             alt={imgAlt ? imgAlt : " "}
             width={imgW ? imgW : 160}
             height={imgH ? imgH : 160}

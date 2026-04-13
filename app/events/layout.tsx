@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import BASE_PATH from "@/lib/constants";
 import SciFiContainer from "./_components/containerSifi";
 
 export default function EventsLayout({
@@ -11,7 +11,7 @@ export default function EventsLayout({
     <div className="flex flex-col w-screen items-center bg-primary text-white relative py-10">
       <Image
         alt="Mountains"
-        src={"/events_bg.png"}
+        src={`${BASE_PATH}/events_bg.png`}
         quality={100}
         fill={true}
         className="opacity-90 "
@@ -19,7 +19,7 @@ export default function EventsLayout({
       />
 
       <Image
-        src="/EVENTS_text.png"
+        src={`${BASE_PATH}/EVENTS_text.png`}
         width={500}
         height={10}
         alt="events"

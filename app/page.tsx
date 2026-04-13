@@ -120,7 +120,7 @@ export default function Home() {
             className={`md:grid md:grid-rows-2 md:gap-4 lg:flex lg:flex-col lg:gap-0 place-items-center`}
           >
             <Image
-              src={"/AiSPIRE_logo_white.png"}
+              src={`${BASE_PATH}/AiSPIRE_logo_white.png`}
               alt="about"
               width={500}
               height={100}

@@ -1,4 +1,5 @@
 "use client";
+import BASE_PATH from "@/lib/constants";
 import Image from "next/image";
 
 import Link from "next/link";
@@ -10,33 +11,33 @@ interface NavbarProps {
 
 const footerLogos = [
   {
-    img: "/logos/AiSPIRE_logo_white.png",
+    img: `${BASE_PATH}/logos/AiSPIRE_logo_white.png`,
     width: 290,
     height: 100,
   },
   {
-    img: "/logos/IEEE_GEC_SB_TransC.png",
+    img: `${BASE_PATH}/logos/IEEE_GEC_SB_TransC.png`,
     width: 500,
     height: 100,
     className: "lg:scale-75",
   },
   {
-    img: "/logos/IEEE_WIE.png",
+    img: `${BASE_PATH}/logos/IEEE_WIE.png`,
     width: 100,
     height: 100,
   },
   {
-    img: "/logos/gec_logo_wo_bg.png",
+    img: `${BASE_PATH}/logos/gec_logo_wo_bg.png`,
     width: 80,
     height: 50,
   },
 ];
 
 const footerLogosMobile = [
-  { img: "/logos/AiSPIRE_logo_white.png", width: 90, height: 40 },
-  { img: "/logos/IEEE_GEC_SB_TransC.png", width: 100, height: 40 },
-  { img: "/logos/IEEE_WIE.png", width: 40, height: 50 },
-  { img: "/logos/gec_logo_wo_bg.png", width: 30, height: 25 },
+  { img: `${BASE_PATH}/logos/AiSPIRE_logo_white.png`, width: 90, height: 40 },
+  { img: `${BASE_PATH}/logos/IEEE_GEC_SB_TransC.png`, width: 100, height: 40 },
+  { img: `${BASE_PATH}/logos/IEEE_WIE.png`, width: 40, height: 50 },
+  { img: `${BASE_PATH}/logos/gec_logo_wo_bg.png`, width: 30, height: 25 },
 ];
 
 const Footer: React.FC<NavbarProps> = ({ className }) => {

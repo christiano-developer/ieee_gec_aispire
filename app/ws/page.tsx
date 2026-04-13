@@ -209,7 +209,7 @@ export default function Speakers() {
               variants={scrollAnimation}
             >
               <Image
-                src={`/ws/${speaker.img}.jpg`}
+                src={`${BASE_PATH}/ws/${speaker.img}.jpg`}
                 width={400}
                 height={400}
                 alt="speaker"
@@ -255,7 +255,7 @@ export default function Speakers() {
               <div key={index} className="w-full flex-shrink-0 px-4">
                 <div className="bg-gradient-to-b from-[#1B4242]/80 to-[#5F8880]/80 my-10 shadow-2xl px-5 py-5 rounded-xl text-center h-[650px] flex flex-col justify-around">
                   <Image
-                    src={`/ws/${speaker.img}.jpg`}
+                    src={`${BASE_PATH}/ws/${speaker.img}.jpg`}
                     width={200}
                     height={200}
                     alt="speaker"
