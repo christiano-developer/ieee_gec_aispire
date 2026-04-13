@@ -19,7 +19,7 @@ export default function EventsLayout({
       />
 
       <Image
-        src="/EVENTS_text.png"
+        src="EVENTS_text.png"
         width={500}
         height={10}
         alt="events"

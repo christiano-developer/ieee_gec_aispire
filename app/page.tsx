@@ -90,7 +90,7 @@ export default function Home() {
           className="w-32 h-32"
         >
           <Image
-            src="/loader.png"
+            src="loader.png"
             alt="Loading Animation"
             width={128}
             height={128}
@@ -126,7 +126,7 @@ export default function Home() {
               className="lg:pl-16 mt-8 lg:scale-[140%] px-10"
             />
             <Image
-              src="/event_date.png"
+              src="event_date.png"
               width={700}
               height={100}
               alt="eventdate"
@@ -313,7 +313,7 @@ export default function Home() {
         variants={scrollAnimation}
         className="relative mb-10 flex flex-col items-center justify-center lg:px-0  lg:scale-100 "
       >
-        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.5] opacity-70  top-6 lg:scale-[1.25]  bg-[url('/home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
+        <div className="absolute inset-0 lg:max-w-screen-lg lg:mx-auto scale-y-[1.5] opacity-70  top-6 lg:scale-[1.25]  bg-[url('home_touch.png')] bg-contain bg-no-repeat bg-center"></div>
         <ContactCard className="relative shadow-md shadow-black lg:scale-100 scale-95" />
       </motion.div>
     </div>

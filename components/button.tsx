@@ -59,7 +59,7 @@ const PDFOverlay: React.FC<PDFOverlayProps> = ({ onClose }) => {
         </Button>
         <div className="overflow-auto h-[calc(100vh-4rem)]">
           <iframe
-            src="/AIspire_Sponsorship_Brochure_2025.pdf"
+            src="AIspire_Sponsorship_Brochure_2025.pdf"
             title="PDF Viewer"
             className="w-full h-screen rounded-b py-10 bg-primary"
           />

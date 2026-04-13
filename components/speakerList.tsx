@@ -20,11 +20,11 @@ const SpeakerCard: React.FC<Speaker> = ({
   img,
   imgAlt,
 }) => {
-  const logosLeft = [{ src: "/HIZE_nobg.png" }];
+  const logosLeft = [{ src: "HIZE_nobg.png" }];
   const logosRight = [
-    { src: "/HIZE_nobg.png" },
-    { src: "/GEC_logo_nobg.png" },
-    { src: "/IEEEMB_nobg.png" },
+    { src: "HIZE_nobg.png" },
+    { src: "GEC_logo_nobg.png" },
+    { src: "IEEEMB_nobg.png" },
   ];
 
   return (
