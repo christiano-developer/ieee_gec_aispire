@@ -36,7 +36,7 @@ const Venue: React.FC<VenueProps> = ({ className }) => {
   return (
     <div
       className={`${pixel.className} flex flex-col justify-center space-y-4 items-center w-full  bg-cover bg-center bg-no-repeat border-4 rounded-2xl border-secondary overflow-hidden ${className}`}
-      style={{ backgroundImage: `url('venue/venue_black_bg.png')` }}
+      style={{ backgroundImage: `url('/venue/venue_black_bg.png')` }}
     >
       {Img.map((venue, index) => (
         <div key={index} className="text-white w-full max-w-5xl  lg:mb-4 ">

@@ -151,7 +151,7 @@ export default function Speakers() {
         <div
           className="absolute inset-0 bg-no-repeat opacity-40 mt-14 bg-cover"
           style={{
-            backgroundImage: "url('ws/bgws.png')",
+            backgroundImage: "url('/ws/bgws.png')",
           }}
         />
         <motion.div
