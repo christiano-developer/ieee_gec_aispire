@@ -27,7 +27,7 @@ const Img = [
   {
     title: "Goa College of Engineering",
     buttonLink: "https://maps.app.goo.gl/YGZ1sjihWvRPJhiR7",
-    img: ["/venue/goa-college-of-engineering-ponda.webp", "/venue/gec_map.png"],
+    img: ["venue/goa-college-of-engineering-ponda.webp", "venue/gec_map.png"],
     loci: "Bhausaheb Bandodkar ,Technical Education Complex Farmagudi ,Ponda , Goa 403401",
   },
 ];
